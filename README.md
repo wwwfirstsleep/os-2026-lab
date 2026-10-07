@@ -1,6 +1,6 @@
 # myshell：Linux 命令解释程序实验
 
-依据上传的《实验课题1_Linux命令解释程序设计与实现》（2022 年 3 月修订）和本次教师补充要求实现。目的是理解命令解析、进程创建/替换/回收、环境变量及文件描述符。此项目为 **AI 协助开发的真实运行成果**，不能宣称学生独立编写。报告位于 `docs/report.pdf` 和 `docs/report.docx`，已填写上传模板中的个人信息，并以 Agent 的真实运行日志为证据。完整聊天导出仍待用户提供，详见 `docs/AGENT_DISCLOSURE.md`。
+依据上传的《实验课题1_Linux命令解释程序设计与实现》（2022 年 3 月修订）和本次教师补充要求实现。目的是理解命令解析、进程创建/替换/回收、环境变量及文件描述符。此项目为 **AI 协助开发的真实运行成果**，不能宣称学生独立编写。报告位于 `docs/report-final.pdf` 和 `docs/report-final.docx`，已填写上传模板中的个人信息，并以 Agent 的真实运行日志为证据。完整聊天导出仍待用户提供，详见 `docs/AGENT_DISCLOSURE.md`。
 
 ## 环境
 
@@ -112,3 +112,7 @@ C 接口名与内核跟踪名不必相同：本机 open 显示为 openat，fork 
 ## 最新截图补充
 
 已取得14张真实xterm终端窗口截图，见docs/screenshots/；已插入24页报告docs/report-with-screenshots.docx及同名PDF。请优先使用这份带图报告，原report.docx/pdf是保留的17页历史底稿。截图10、14标明查看历史成功日志，12、13保留本次/proc和ptrace限制，不能声称本次完整验证成功。完整聊天导出与仓库上传仍未完成。
+
+## 最新交付状态
+
+当前报告为docs/report-final.pdf与同名Word，共26页。GitHub复验产物保存在evidence/github-20261007/，包含新环境、完整测试和真实strace证据，原环境失败日志继续保留。已附用户提供的交互Word和补充TXT，内容有缺失，未标为完整会话。

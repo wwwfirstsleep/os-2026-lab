@@ -1,0 +1,5 @@
+PASS: 12 stage exit codes zero; 69+18 real subprocess cases with PTY; 4 parser regression cases.
+PASS: final trace created PIDs = reaped PIDs = 3775,3776,3777,3778,3779.
+PASS: current remote src/myshell.c, Makefile, tests/run_tests.py, tests/test_audit.py match local bytes.
+PASS: report-final 26 pages; previous24 PNGs identical, new25-26 visually inspected.
+Partial interaction document received; missing middle development dialogue.

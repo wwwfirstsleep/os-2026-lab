@@ -1,0 +1,17 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 09-pipe | UTC: 2026-10-07T04:59:12Z
+$ printf %s 'ls | wc -l
+printf hello | wc -c
+cat screenshot-out.txt | wc -w
+exit
+' | script -q -e -c ./myshell /dev/null
+ls | wc -l
+printf hello | wc -c
+cat screenshot-out.txt | wc -w
+exit
+[OS-LAB1] myshell$ 9
+[OS-LAB1] myshell$ 5
+[OS-LAB1] myshell$ 2
+[OS-LAB1] myshell$ 
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

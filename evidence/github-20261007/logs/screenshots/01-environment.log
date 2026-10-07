@@ -1,0 +1,24 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 01-environment | UTC: 2026-10-07T04:59:04Z
+$ uname -a; cat /etc/os-release; gcc --version | head -1; make --version | head -1; strace --version | head -1; git --version
+Linux runnervm8df0l 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+GNU Make 4.3
+strace -- version 6.8
+git version 2.55.0
+
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

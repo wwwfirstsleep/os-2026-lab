@@ -1,0 +1,18 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 05-external | UTC: 2026-10-07T04:59:08Z
+$ printf %s 'ls -l src
+whoami
+uname -a
+exit
+' | script -q -e -c ./myshell /dev/null
+ls -l src
+whoami
+uname -a
+exit
+[OS-LAB1] myshell$ total 12
+-rw-r--r-- 1 runner runner 11532 Oct  7 04:58 myshell.c
+[OS-LAB1] myshell$ runner
+[OS-LAB1] myshell$ Linux runnervm8df0l 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+[OS-LAB1] myshell$ 
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

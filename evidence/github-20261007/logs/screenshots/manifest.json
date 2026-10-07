@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "01-environment",
+    "exit": 0,
+    "image": "01-environment.png"
+  },
+  {
+    "stage": "02-build",
+    "exit": 0,
+    "image": "02-build.png"
+  },
+  {
+    "stage": "03-prompt",
+    "exit": 0,
+    "image": "03-prompt.png"
+  },
+  {
+    "stage": "04-builtins",
+    "exit": 0,
+    "image": "04-builtins.png"
+  },
+  {
+    "stage": "05-external",
+    "exit": 0,
+    "image": "05-external.png"
+  },
+  {
+    "stage": "06-cd",
+    "exit": 0,
+    "image": "06-cd.png"
+  },
+  {
+    "stage": "07-files",
+    "exit": 0,
+    "image": "07-files.png"
+  },
+  {
+    "stage": "08-redirection",
+    "exit": 0,
+    "image": "08-redirection.png"
+  },
+  {
+    "stage": "09-pipe",
+    "exit": 0,
+    "image": "09-pipe.png"
+  },
+  {
+    "stage": "10-strace",
+    "exit": 0,
+    "image": "10-strace.png"
+  },
+  {
+    "stage": "11-git",
+    "exit": 0,
+    "image": "11-git.png"
+  },
+  {
+    "stage": "12-final-tests",
+    "exit": 0,
+    "image": "12-final-tests.png"
+  }
+]

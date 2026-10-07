@@ -1,0 +1,166 @@
+3774  close(3)                          = 0
+3774  close(3)                          = 0
+3774  close(3)                          = 0
+3774  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+3774  dup2(4, 1)                        = 1
+3774  close(4)                          = 0
+3774  dup2(3, 1)                        = 1
+3774  close(3)                          = 0
+3774  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  close(4)                          = 0
+3775  statx(AT_FDCWD, "out.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=12, ...}) = 0
+3775  lgetxattr("out.txt", "security.selinux", 0x55d0c12d2080, 255) = -1 ENODATA (No data available)
+3775  listxattr("out.txt", "", 152)     = 0
+3775  close(3)                          = 0
+3775  close(3)                          = 0
+3775  close(1)                          = 0
+3775  close(2)                          = 0
+3774  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+3774  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+3774  dup2(4, 1)                        = 1
+3774  close(4)                          = 0
+3774  dup2(3, 1)                        = 1
+3774  close(3)                          = 0
+3774  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+3774  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+3774  dup2(4, 1)                        = 1
+3774  close(4)                          = 0
+3774  dup2(3, 1)                        = 1
+3774  close(3)                          = 0
+3774  fcntl(0, F_DUPFD_CLOEXEC, 3)      = 3
+3774  openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+3774  dup2(4, 0)                        = 0
+3774  close(4)                          = 0
+3774  dup2(3, 0)                        = 0
+3774  close(3)                          = 0
+3776  dup2(4, 1)                        = 1
+3776  close(3 <unfinished ...>
+3774  close(3 <unfinished ...>
+3776  close(4 <unfinished ...>
+3774  close(4 <unfinished ...>
+3777  dup2(3, 0 <unfinished ...>
+3777  close(3 <unfinished ...>
+3777  close(4 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3777  close(3)                          = 0
+3777  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3777  close(3 <unfinished ...>
+3776  close(3 <unfinished ...>
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  close(3)                          = 0
+3776  write(1, "out.txt\ntest.txt\n", 17) = 17
+3777  <... read resumed>"out.txt\ntest.txt\n", 16320) = 17
+3776  close(1 <unfinished ...>
+3776  close(2 <unfinished ...>
+3777  close(0)                          = 0
+3777  close(1)                          = 0
+3777  close(2)                          = 0
+3778  dup2(4, 1)                        = 1
+3778  close(3 <unfinished ...>
+3774  close(3 <unfinished ...>
+3778  close(4 <unfinished ...>
+3774  close(4 <unfinished ...>
+3779  dup2(3, 0 <unfinished ...>
+3779  close(3)                          = 0
+3779  close(4)                          = 0
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3779  close(3 <unfinished ...>
+3778  close(3 <unfinished ...>
+3778  close(3)                          = 0
+3778  close(1 <unfinished ...>
+3778  close(2 <unfinished ...>
+3779  close(0)                          = 0
+3779  close(1)                          = 0
+3779  close(2)                          = 0

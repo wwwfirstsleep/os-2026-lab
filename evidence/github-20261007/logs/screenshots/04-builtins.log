@@ -1,0 +1,20 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 04-builtins | UTC: 2026-10-07T04:59:07Z
+$ printf %s 'pwd
+echo hello
+echo $HOME
+echo $PATH
+exit
+' | script -q -e -c ./myshell /dev/null
+pwd
+echo hello
+echo $HOME
+echo $PATH
+exit
+[OS-LAB1] myshell$ /home/runner/work/os-2026-lab/os-2026-lab
+[OS-LAB1] myshell$ hello
+[OS-LAB1] myshell$ /home/runner
+[OS-LAB1] myshell$ /snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[OS-LAB1] myshell$ 
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

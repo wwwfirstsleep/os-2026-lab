@@ -1,0 +1,5 @@
+3774  getcwd("/home/runner/work/os-2026-lab/os-2026-lab", 4096) = 42
+3774  chdir("/tmp")                     = 0
+3774  getcwd("/tmp", 4096)              = 5
+3774  chdir("/home/runner/work/os-2026-lab/os-2026-lab/tests/tmp/trace") = 0
+3774  getcwd("/home/runner/work/os-2026-lab/os-2026-lab/tests/tmp/trace", 4096) = 58

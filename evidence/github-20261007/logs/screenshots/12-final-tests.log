@@ -1,0 +1,16 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 12-final-tests | UTC: 2026-10-07T04:59:14Z
+$ bash tests/verify.sh > logs/screenshots/verify-run.log 2>&1; rc=$?; tail -6 logs/final_test.log; if test "$rc" = 0; then cat logs/verification_summary.log; else tail -12 logs/screenshots/verify-run.log; fi; printf "verify_exit=%s\n" "$rc"; python3 tests/test_audit.py > logs/screenshots/additional.log 2>&1; ar=$?; tail -2 logs/screenshots/additional.log; test "$rc" = 0 && test "$ar" = 0
+[OS-LAB1] myshell$ 
+PASS prompt returns after errors
+
+TOTAL PASS 69 subprocess cases; PTY checked in robust group
+python3 tests/test_trace_parser.py
+PASS: 4 trace-parser regression samples (synthetic parser inputs, not runtime evidence)
+PASS: clean build, full suite, grouped tests and real strace completed
+verify_exit=0
+[OS-LAB1] myshell$ 
+TOTAL PASS 18 additional subprocess cases + PTY check
+
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

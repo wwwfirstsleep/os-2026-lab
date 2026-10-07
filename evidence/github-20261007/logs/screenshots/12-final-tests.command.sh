@@ -1,0 +1,2 @@
+#!/bin/bash
+bash tests/verify.sh > logs/screenshots/verify-run.log 2>&1; rc=$?; tail -6 logs/final_test.log; if test "$rc" = 0; then cat logs/verification_summary.log; else tail -12 logs/screenshots/verify-run.log; fi; printf "verify_exit=%s\n" "$rc"; python3 tests/test_audit.py > logs/screenshots/additional.log 2>&1; ar=$?; tail -2 logs/screenshots/additional.log; test "$rc" = 0 && test "$ar" = 0

@@ -1,0 +1,11 @@
+/home/runner/work/os-2026-lab/os-2026-lab
+/tmp
+/home/runner/work/os-2026-lab/os-2026-lab/tests/tmp/trace
+trace-data
+total 8
+-rw-r--r-- 1 runner runner 12 Oct  7 04:59 out.txt
+-rw-r--r-- 1 runner runner 11 Oct  7 04:59 test.txt
+hello
+world
+2
+5

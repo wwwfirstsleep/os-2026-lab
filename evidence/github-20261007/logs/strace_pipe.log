@@ -1,0 +1,24 @@
+3774  dup2(4, 1)                        = 1
+3774  dup2(3, 1)                        = 1
+3774  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa922b5ba10) = 3775
+3774  wait4(3775,  <unfinished ...>
+3774  dup2(4, 1)                        = 1
+3774  dup2(3, 1)                        = 1
+3774  dup2(4, 1)                        = 1
+3774  dup2(3, 1)                        = 1
+3774  dup2(4, 0)                        = 0
+3774  dup2(3, 0)                        = 0
+3774  pipe2([3, 4], 0)                  = 0
+3774  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa922b5ba10) = 3776
+3774  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+3776  dup2(4, 1)                        = 1
+3777  dup2(3, 0 <unfinished ...>
+3774  wait4(3776,  <unfinished ...>
+3774  wait4(3777,  <unfinished ...>
+3774  pipe2([3, 4], 0)                  = 0
+3774  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fa922b5ba10) = 3778
+3774  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+3778  dup2(4, 1)                        = 1
+3779  dup2(3, 0 <unfinished ...>
+3774  wait4(3778,  <unfinished ...>
+3774  wait4(3779,  <unfinished ...>

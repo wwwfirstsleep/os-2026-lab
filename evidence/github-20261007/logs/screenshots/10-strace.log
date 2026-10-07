@@ -1,0 +1,53 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 10-strace | UTC: 2026-10-07T04:59:12Z
+$ bash tests/trace.sh > logs/screenshots/trace-run.log 2>&1; rc=$?; if test "$rc" = 0; then sed -n 1,39p logs/strace_key.log; grep -E "pipe2|clone|wait4" logs/strace.log | head -8; else tail -25 logs/screenshots/trace-run.log; fi; exit "$rc"
+## cd
+3281  chdir("/tmp")                     = 0
+
+## pwd
+3281  getcwd("/home/runner/work/os-2026-lab/os-2026-lab", 4096) = 42
+3281  getcwd("/tmp", 4096)              = 5
+3281  getcwd("/home/runner/work/os-2026-lab/os-2026-lab/tests/tmp/trace", 4096) = 58
+
+## touch/cat
+3281  openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT, 0666) = 3
+3281  openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+3281  openat(AT_FDCWD, "test.txt", O_RDONLY) = 3
+
+## rm
+3281  unlink("test.txt")                = 0
+
+## external
+3282  execve("/usr/bin/ls", ["ls", "-l"], 0x7ffffd5735a8 /* 122 vars */) = 0
+
+## redirection open
+3281  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+3281  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+3281  openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+
+## redirection dup2
+3281  dup2(4, 1)                        = 1
+3281  dup2(3, 1)                        = 1
+3281  dup2(4, 1)                        = 1
+
+## read
+3281  read(0, "hello\nworld\n", 8192)   = 12
+
+## write
+3281  write(1, "hello\n", 6)            = 6
+3281  write(1, "hello\nworld\n", 12)    = 12
+3285  write(1, "hello", 5)              = 5
+
+## pipe
+3281  pipe2([3, 4], 0)                  = 0
+3281  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7ffac55c3a10) = 3282
+3281  wait4(3282,  <unfinished ...>
+3281  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3282
+3281  pipe2([3, 4], 0)                  = 0
+3281  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7ffac55c3a10) = 3283
+3281  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+3281  <... clone resumed>, child_tidptr=0x7ffac55c3a10) = 3284
+3281  wait4(3283,  <unfinished ...>
+
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

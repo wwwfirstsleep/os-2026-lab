@@ -1,0 +1,13 @@
+OS LAB 1 | Wang Xusheng | 24281204 | Agent Linux run
+Stage: 11-git | UTC: 2026-10-07T04:59:13Z
+$ git log --oneline --reverse
+407712f Initial commit
+004996b Add files via upload
+506bb46 Add README for logs directory
+886ea03 Add files via upload
+197cbcf Add files via upload
+3ce5229 Create capture-evidence.yml
+fc3a813 Add GitHub Actions workflow for capturing terminal evidence
+
+[actual stage exit status: 0]
+Screenshot capture point; terminal held open

@@ -1,0 +1,938 @@
+星期六 9:33
+ZGSOS操作系统实验指导《实验课题1_Linux命令解释程序设计与实现》.pdf
+PDF
+我要完成《操作系统》实验课题 1：Linux 命令解释程序设计与实现。
+
+请严格以我上传的《实验课题1_Linux命令解释程序设计与实现》PDF，以及下面补充的教师要求为准完成实验。不要擅自减少实验要求，也不要声明任何实际上没有实现、没有测试通过的功能。
+
+我的目标不是单纯生成一份代码，而是完成一个**可以真实编译、运行、测试、使用 strace 验证，并且能够形成实验报告证据链的 Linux Shell 项目**。
+
+## 一、实验基础要求
+
+根据实验指导书，Shell 至少需要完成：
+
+1. 实现 Linux 命令解释程序 Shell。
+2. 实现命令提示符显示。
+3. 实现命令输入、解析、识别和执行。
+4. 实现至少 5 条内部命令。
+5. 外部命令必须通过直接调用 exec 系列系统调用执行。
+6. 至少一条内部命令必须通过直接调用相应系统调用实现。
+7. 支持系统环境变量：
+
+   * HOME
+   * PATH
+8. 可以在 Linux 系统中正常编译、启动、运行和测试验证。
+
+## 二、建议实现的内部命令
+
+优先实现以下内部命令：
+
+* cd
+* pwd
+* echo
+* cat
+* touch
+* rm
+* exit
+
+可以根据实际实现情况增加其他简单内部命令，但不要为了数量加入未经充分测试的功能。
+
+实现时尽量体现 Linux 系统调用和 C 标准库之间的关系。
+
+例如：
+
+* cd：使用 chdir
+* pwd：使用 getcwd
+* cat：使用 open / read / write
+* touch：使用 open
+* rm：使用 unlink
+* 外部命令：使用 fork + execvp/execve + wait/waitpid
+
+其中至少保证一条内部命令明确直接调用系统调用完成，方便后续使用 strace 验证。
+
+## 三、额外功能
+
+完成全部基础要求并确保稳定后，再依次增加以下功能：
+
+### 1. I/O 重定向
+
+支持：
+
+* command > file
+* command >> file
+* command < file
+
+实现时应正确使用：
+
+* open
+* dup2
+* close
+
+必须真正改变目标命令的 stdin/stdout，而不是把程序日志写入文件。
+
+尤其需要明确区分：
+
+* Shell I/O 重定向
+* 程序自身日志输出
+
+不要在 README 或实验报告中把两者混为一谈。
+
+### 2. 管道
+
+至少支持单个管道，例如：
+
+ls | wc -l
+
+实现时应使用：
+
+* pipe
+* fork
+* dup2
+* exec
+* close
+* wait/waitpid
+
+如果单级管道已经稳定，可以考虑扩展多级管道，但多级管道不是第一优先级。
+
+### 3. 其他扩展
+
+只有在前面全部稳定后，才考虑：
+
+* 多级管道
+* 通配符
+* 其他 Shell 功能
+
+任何额外功能都必须实际实现并测试后才能在 README 和报告中声明支持。
+
+## 四、开发环境检查
+
+开始编码之前，先检查当前 Linux 环境。
+
+执行并记录：
+
+
+bash
+uname -a
+cat /etc/os-release
+gcc --version
+make --version
+strace --version
+git --version
+
+
+如果 gcc、make、strace 缺失，请安装。
+
+记录：
+
+* Linux 发行版
+* Linux 内核版本
+* gcc 版本
+* make 版本
+* strace 版本
+* CPU 架构
+
+这些信息后续需要用于实验报告。
+
+## 五、项目目录
+
+请创建一个结构清晰的项目，例如：
+
+
+text
+myshell/
+├── src/
+│   └── myshell.c
+├── Makefile
+├── README.md
+├── tests/
+│   ├── test_basic.sh
+│   ├── test_redirect.sh
+│   └── test_pipe.sh
+├── logs/
+│   ├── basic_test.log
+│   ├── redirect_test.log
+│   ├── pipe_test.log
+│   └── strace.log
+└── docs/
+
+
+如果实际需要拆分源代码，可以调整为多个 .c / .h 文件，但不要为了架构复杂化而过度设计。
+
+## 六、开发方式
+
+不要一开始直接生成一个包含所有功能的大程序。
+
+请按以下阶段开发。
+
+### 阶段 1：最小可运行 Shell
+
+先实现：
+
+* Shell 启动
+* 命令提示符
+* 输入读取
+* 简单参数解析
+* exit
+* fork
+* exec
+* wait
+
+要求能够正常执行：
+
+
+bash
+ls
+ls -l
+whoami
+uname -a
+echo hello
+
+
+每完成一项都进行编译和实际测试。
+
+### 阶段 2：内部命令
+
+依次加入：
+
+* cd
+* pwd
+* echo
+* cat
+* touch
+* rm
+
+每增加一个命令：
+
+1. 编译。
+2. 测试正常情况。
+3. 测试至少一个异常情况。
+4. 保存测试输出。
+5. 确认没有破坏已有功能。
+
+特别注意：
+
+cd 必须在 Shell 主进程中执行。
+
+请解释为什么：
+
+如果在 fork 出来的子进程中执行 chdir，只会改变子进程工作目录，无法改变 Shell 主进程自己的当前工作目录。
+
+这个设计思想后续需要写进实验报告。
+
+### 阶段 3：HOME 和 PATH
+
+验证：
+
+
+bash
+echo $HOME
+echo $PATH
+
+
+Shell 在执行外部命令时，应能根据 PATH 查找可执行文件。
+
+如果使用 execvp，请解释它与 PATH 搜索之间的关系。
+
+如果 Shell 自己实现 PATH 搜索，也请记录实现思路。
+
+### 阶段 4：I/O 重定向
+
+实现：
+
+
+bash
+echo hello > out.txt
+echo world >> out.txt
+cat < out.txt
+
+
+验证：
+
+
+bash
+cat out.txt
+
+
+并通过 strace 确认出现相关：
+
+* open/openat
+* dup2
+* close
+* write/read
+
+### 阶段 5：管道
+
+实现：
+
+
+bash
+ls | wc -l
+cat out.txt | wc -w
+
+
+并使用 strace 验证：
+
+* pipe/pipe2
+* fork/clone
+* dup2
+* execve
+* read
+* write
+
+## 七、strace 验证
+
+教师明确要求安装并理解 strace，因此 strace 不能只安装不用。
+
+请使用：
+
+
+bash
+strace -f -o logs/strace.log ./myshell
+
+
+-f 用于跟踪 Shell 创建的子进程。
+
+在 Shell 中分别执行具有代表性的命令。
+
+例如：
+
+
+text
+pwd
+cd /tmp
+pwd
+cat test.txt
+ls -l
+echo hello > out.txt
+cat < out.txt
+ls | wc -l
+exit
+
+
+之后分析日志。
+
+例如：
+
+
+bash
+grep execve logs/strace.log
+grep chdir logs/strace.log
+grep openat logs/strace.log
+grep read logs/strace.log
+grep write logs/strace.log
+grep dup2 logs/strace.log
+grep pipe logs/strace.log
+
+
+不要只保存整份巨大日志。
+
+请额外提取与各个实验功能直接相关的关键系统调用片段，保存为方便报告使用的日志文件。
+
+## 八、测试要求
+
+实验中声明支持的每一个功能，都必须有对应测试。
+
+请为每项功能建立：
+
+**功能 → 代码 → 测试命令 → 运行结果 → strace/日志证据**
+
+的对应关系。
+
+例如：
+
+### cd
+
+测试：
+
+
+text
+pwd
+cd /tmp
+pwd
+
+
+预期：
+
+第二次 pwd 应显示 /tmp。
+
+strace 应能够观察到类似：
+
+
+text
+chdir("/tmp")
+
+
+### 外部命令
+
+测试：
+
+
+text
+ls -l
+
+
+strace 应观察到 execve。
+
+### 输出重定向
+
+测试：
+
+
+text
+echo hello > out.txt
+cat out.txt
+
+
+结果必须真实生成 out.txt。
+
+strace 应能观察到：
+
+* open/openat
+* dup2
+* write
+
+### 管道
+
+测试：
+
+
+text
+printf hello | wc -c
+
+
+结果正确后，再检查 pipe、dup2、exec 等相关系统调用。
+
+## 九、异常测试
+
+不能只测试正常情况。
+
+至少测试：
+
+
+text
+cd /not_exist
+cat not_exist.txt
+rm not_exist.txt
+unknown_command
+
+
+程序不能因此崩溃。
+
+应该输出合理的错误信息，并继续显示 Shell 提示符。
+
+## 十、编译要求
+
+提供 Makefile。
+
+至少支持：
+
+
+bash
+make
+make clean
+
+
+建议 gcc 编译参数包括：
+
+
+bash
+-Wall -Wextra
+
+
+尽量消除编译 warning。
+
+如果存在无法合理消除的 warning，请说明原因，而不是直接忽略。
+
+## 十一、代码质量要求
+
+代码以“容易理解实验原理”为第一目标，不要过度工程化。
+
+要求：
+
+* 函数职责清楚
+* 合理拆分解析、内部命令、外部命令、重定向、管道逻辑
+* 检查系统调用返回值
+* 正确关闭文件描述符
+* fork 后正确区分父进程与子进程
+* 避免明显的内存越界
+* 避免僵尸进程
+* 错误使用 perror 或其他合理方式报告
+
+重要代码请添加说明“为什么这样做”，而不只是复述代码行为。
+
+## 十二、Git 过程记录
+
+初始化 Git 仓库。
+
+不要最后一次性提交全部代码。
+
+建议按照开发过程进行多个 commit，例如：
+
+
+text
+init project
+implement minimal shell
+add builtin cd and pwd
+add builtin file commands
+add PATH and environment support
+add output redirection
+add input redirection
+add pipe support
+add tests and strace logs
+update README
+
+
+每个 commit 之前尽量确保当前版本可以正常编译。
+
+这样最终 Git 历史可以作为实验独立完成和开发过程的辅助证据。
+
+## 十三、过程证据要求
+
+教师会关注：
+
+* 代码
+* 运行日志
+* AI/Agent 交互记录
+* Git 历史
+* 截图
+
+之间是否互相对应。
+
+因此开发过程中请保留真实过程。
+
+包括：
+
+* 环境检查
+* 第一次编译
+* 编译错误
+* bug
+* bug 修复过程
+* 功能逐步加入
+* 测试结果
+* strace 分析
+* Git commit
+
+不要为了让过程看起来完美而删除所有错误记录。
+
+真正发现问题、分析问题、解决问题的过程反而是实验理解的重要证据。
+
+## 十四、截图提醒
+
+每到适合截图的位置，请明确提醒我：
+
+“这里建议截图”。
+
+优先提醒以下截图：
+
+1. Linux / gcc / strace 环境版本。
+2. make 编译成功。
+3. Shell 启动界面。
+4. 内部命令运行。
+5. 外部命令运行。
+6. cd 前后目录变化。
+7. 文件类内部命令。
+8. 输入输出重定向。
+9. 管道。
+10. strace 关键结果。
+11. Git log。
+12. 最终综合测试。
+
+如果方便，应在截图终端中体现我的个人信息或实验标识，但不要修改系统关键配置。
+
+## 十五、README
+
+最终 README 至少包含：
+
+1. 项目名称。
+2. 实验目的。
+3. 开发环境。
+4. 编译方法。
+5. 运行方法。
+6. 已实现基础功能。
+7. 已实现扩展功能。
+8. 未实现功能。
+9. 测试方法。
+10. strace 验证方法。
+11. 主要设计思路。
+12. 已知问题。
+
+README 中绝不能声明尚未实现或尚未测试通过的功能。
+
+## 十六、实验理解
+
+在开发过程中，请帮助我真正理解至少以下问题，而不是只给代码：
+
+1. Shell 为什么需要 fork + exec？
+2. fork 后父子进程分别做什么？
+3. 为什么 cd 不能像普通外部命令一样在子进程执行？
+4. exec 调用成功后为什么不会返回原来的程序？
+5. PATH 的作用是什么？
+6. 文件描述符 0、1、2 分别是什么？
+7. > 为什么可以通过 open + dup2 实现？
+8. 管道为什么需要两个文件描述符？
+9. 管道两端为什么必须关闭不需要的 fd？
+10. strace 为什么可以看到 Shell 实际发生的系统调用？
+11. C 库函数与 Linux 系统调用是什么关系？
+12. wait/waitpid 为什么重要？
+
+如果这些问题在实际代码中出现，请结合当前实现解释。
+
+## 十七、最终验收
+
+最终不要只告诉我“完成了”。
+
+请进行一次完整验收。
+
+逐项检查：
+
+* [ ] gcc 正常
+* [ ] strace 正常
+* [ ] make 无错误
+* [ ] Shell 正常启动
+* [ ] 提示符正常
+* [ ] 至少 5 条内部命令
+* [ ] cd 工作正常
+* [ ] 外部命令通过 exec 执行
+* [ ] 至少一条内部命令直接使用系统调用
+* [ ] HOME 支持
+* [ ] PATH 支持
+* [ ] > 正常
+* [ ] >> 正常
+* [ ] < 正常
+* [ ] 单级 | 正常
+* [ ] 非法命令不会导致 Shell 崩溃
+* [ ] strace 可以看到关键系统调用
+* [ ] tests 中有对应测试
+* [ ] logs 中有运行日志
+* [ ] README 与实际功能一致
+* [ ] Git 历史存在
+* [ ] 所有报告中准备声明的功能均有真实测试证据
+
+如果其中某项没有完成，就明确标记为未完成，不得伪装成已经完成。
+
+## 十八、执行方式
+
+现在开始实际操作。
+
+请先：
+
+1. 阅读我上传的实验指导书。
+2. 检查当前 Linux 环境。
+3. 检查 gcc、make、strace、git。
+4. 展示环境检查结果。
+5. 创建项目目录。
+6. 初始化 Git。
+7. 实现“最小可运行 Shell”。
+8. 编译并实际测试。
+9. 保存第一次测试结果。
+10. 提醒我哪些结果适合截图。
+
+完成以上内容并确认最小版本稳定后，再继续加入内部命令、重定向和管道。
+
+整个过程中，以“真实运行结果”为准，而不是以代码看起来正确为准。
+实验报告模板.docx
+文档
+我提交的话提交哪些文件，截哪些屏，你给我标好了该截图的位置，留好放截图的地方
+
+仓库已检查：目前是空仓库，可以读取，但写入检查因缺少 GitHub 身份认证而失败。
+
+我已准备好 Linux 自动运行与真实终端截图流程，覆盖环境、编译、内部命令、外部命令、重定向、管道、strace 和综合测试。流程尚未执行，截图也尚未插入报告。
+
+现在需要你完成一次连接：
+
+安装并连接这里的 GitHub 插件。
+登录 wwwfirstsleep，授权访问 os-2026-lab 仓库。
+完成后回复我“已连接”。
+
+然后我会继续上传项目、运行截图流程、检查结果，并把真实截图插入 Word 和 PDF 报告。不用把密码或 Token 发给我。
+
+目前显示 GitHub 还未安装连接。你在 Mac 上按下面操作：
+
+点击本对话中的 GitHub 入口，选择“安装”或“连接”（以实际按钮为准）。
+按提示打开 GitHub 授权页面，登录 wwwfirstsleep。
+如果页面询问授权哪些仓库，选择 Only select repositories（仅选定仓库）。
+选中 os-2026-lab，再点击页面的 Install / Authorize / Save 完成授权。
+返回这个对话，告诉我“已连接”，我会检查实际权限并继续。
+
+如果对话里找不到 GitHub 入口，打开 插件目录，搜索 GitHub，进入后安装并连接。
+
+如果你看到的页面和这些步骤不同，直接截图发给我，我会根据你的页面告诉你具体点哪里。 不要发送密码、验证码或 Token。
+
+你现在不用重新写代码，也不用先在 Mac 上装 Linux。接下来主要做四件事：补聊天记录、上传项目、在 GitHub 补一次完整复验、更新最终报告。
+
+请按下面顺序操作。
+
+1．下载最新版，别混用之前的压缩包
+
+下载这个：
+
+完整项目包，含14张截图及24页报告
+
+在 Mac 上：
+
+打开 Finder →“下载”。
+双击压缩包解压。
+打开 os-2026-lab-upload 文件夹。
+后续上传都从这个文件夹里取文件。
+
+报告优先使用：
+
+docs/report-with-screenshots.pdf
+docs/report-with-screenshots.docx
+
+report.pdf、report.docx 是保留的旧版底稿，不要误把它们作为最新版报告提交。
+
+2．明确现在还缺什么
+
+材料或事项	当前状态	接下来怎么处理
+源码、Makefile、测试脚本	已有	上传
+历史真实测试和 strace 日志	已有	上传并保留
+14张终端截图及带图报告	已有	上传
+完整 AI/Agent 交互记录	未补齐	保存本实验完整聊天
+GitHub 中的项目内容	尚未上传	按下面分批上传
+新环境完整复验	尚未完成	上传后运行 Actions
+你自己的理解和体会	需你确认	阅读原理说明，补真实体会
+报告中的最终提交状态	还需更新	复验后发给我统一修改
+
+现有报告保留了本次 /proc 和 strace 权限受限的结果。这是如实记录，不要手动删除失败、改成通过。 GitHub 复验成功后，可以追加新的成功证据。
+
+3．补齐完整聊天记录
+
+老师特别强调 Agent 交互记录，所以这一步要做。
+
+我无法确认你当前界面是否提供单独导出本会话的按钮。你可以这样处理：
+
+查看当前对话的菜单，若有“导出”或“下载对话”，优先保存原始导出。
+如果没有，分段复制本实验的对话到 Word，包括你的要求、我的回复、实际可见的运行记录和错误修复过程。
+从最初实验要求开始，一直保存到最后完成验收；不要只截取“完成了”的几条消息。
+检查开头、中间和结尾是否完整，保留用户与助手的身份区分。
+保存为 完整Agent交互记录.docx，也可以另外导出 PDF。
+放进：
+os-2026-lab-upload/docs/agent-interaction/
+
+注意： docs/process.md 只是过程摘要，不能改个名字就当成完整聊天记录。若你只能取得部分内容，应标明“部分记录”，不能写“完整记录已附”。
+
+只提交本实验相关会话，不需要上传包含其他聊天的整个账户导出包。后续如果继续修复，还要把新增对话补进去。
+
+4．先上传源码和报告
+
+打开你的仓库：
+
+https://github.com/wwwfirstsleep/os-2026-lab
+
+如果还是空仓库，点击页面中的 uploading an existing file；如果已经有文件，点击 Add file → Upload files。GitHub 网页支持拖入文件和文件夹，一次最多上传100个文件。
+
+第一批选择下面这些内容：
+
+src 文件夹
+tests 文件夹
+docs 文件夹
+Makefile
+README.md
+history.bundle
+
+操作方法：
+
+在 Finder 中按住 Command，选中以上内容。
+拖到 GitHub 上传区域。
+等待文件加载完成。
+提交说明填写：
+Upload lab source tests reports and development history
+提交到仓库默认分支，通常是 main；按钮按页面显示可能是 Commit changes。如果页面要求通过 Pull Request 提交，就创建后合并到默认分支。
+
+拖进去的是这些文件和文件夹，不是外层 os-2026-lab-upload 文件夹，也不是 ZIP 压缩包。
+
+完成后，仓库首页应该直接看到 src、tests、docs 和 Makefile。
+
+这里建议截图：仓库首页的目录结构。
+
+5．分批上传日志，避免超过100个文件
+
+目前 logs 中共有133个文件，不能一次全部拖进去。
+
+先建立远程日志目录：
+
+回到仓库首页。
+点击 Add file → Create new file。
+文件名填写：
+logs/README-upload.md
+内容填写：
+本目录保存实验各阶段运行日志、失败记录、测试结果和系统调用跟踪。
+提交。
+
+然后点击仓库中的 logs 目录，在这个目录里分四批上传：
+
+批次	从本地选择什么	上传位置
+第一批	本地 logs 中直接可见的54个普通文件，不选子文件夹	GitHub 的 logs 目录
+第二批	整个 archive_initial 文件夹	GitHub 的 logs 目录
+第三批	整个 audit_20261007 文件夹	GitHub 的 logs 目录
+第四批	整个 screenshots_local 文件夹	GitHub 的 logs 目录
+
+每一批上传后都提交，再开始下一批。
+
+注意别传成：
+
+logs/logs/……
+
+上传后，应该能打开：
+
+logs/final_test.log
+logs/strace.log
+logs/screenshots_local/manifest.json
+
+关于 Git 历史：网页上传不会把原来的开发提交自动变成 GitHub 的提交图。 原始分阶段历史已经保存在 history.bundle，可读清单在 logs/git_history.log。因此这两个文件都要保留，不能只上传源码。
+
+6．添加已经准备好的截图和复验工作流
+
+这一步让 GitHub 的 Linux 运行器执行实验，不是在你的 Mac 上执行。
+
+在仓库首页：
+
+点击 Add file → Create new file。
+文件名准确填写：
+.github/workflows/capture-evidence.yml
+在本地解压目录找到：
+capture-evidence.yml.txt
+右键该文件 →“打开方式”→“文本编辑”。
+按 Command + A 全选，再按 Command + C 复制。
+回到 GitHub 的代码编辑区域，粘贴全部内容。
+不要额外加 Markdown 的三个反引号。
+提交到默认分支。
+
+这里建议截图：工作流文件路径和内容。
+
+Mac 默认隐藏 .github 文件夹，因此使用网页创建文件的方式更直接。
+
+7．运行一次完整复验
+
+工作流文件放到默认分支后：
+
+点击仓库上方 Actions。
+左侧选择：
+Capture real Linux terminal evidence
+点击 Run workflow。
+选择默认分支。
+再点击运行按钮。
+
+该工作流使用手动触发方式；GitHub 官方说明，配置了 workflow_dispatch 的工作流可以从 Actions 页面运行。
+
+工作流会尝试：
+
+安装 Linux 编译、strace 和图形终端工具。
+编译并运行实验程序。
+执行完整测试及追加测试。
+执行真实 strace。
+截取运行器中的真实终端窗口。
+保存截图、输出和退出码。
+
+它目前尚未在 GitHub 实际跑过，所以不能提前保证一定成功。
+
+运行结束后：
+
+绿色： 打开运行详情，继续检查具体日志和截图。
+红色： 打开带红叉的步骤，把错误信息或运行链接发给我；不要改报告说“全部通过”。
+
+这里建议截图：本次运行的整体状态、步骤列表和实际结果。失败也可以保留。
+
+8．下载运行结果，发给我更新报告
+
+打开本次 Actions 运行详情，找到 Artifacts，下载：
+
+linux-terminal-evidence
+
+GitHub 的工作流产物可以从运行详情页下载。
+
+下载后，先不要把里面的日志直接覆盖项目里的旧日志，以免丢失之前的证据。
+
+把下面三样发给我：
+
+linux-terminal-evidence 下载得到的压缩包。
+本次 Actions 运行页面链接。
+保存好的本实验聊天记录。
+
+我会据此检查：
+
+完整测试是否真的通过。
+strace 是否成功，以及关键系统调用是否对应。
+截图是否清晰、完整。
+新运行环境的版本信息。
+报告中的环境、测试结论、仓库链接及附件状态是否需要更新。
+
+之后再把更新的 Word/PDF 和相关材料上传到仓库。已有14张截图可以保留，新成功结果应作为追加证据，不必抹掉真实失败过程。
+
+9．补一小段你自己的理解
+
+先打开：
+
+docs/understanding.md
+
+至少确认自己能解释：
+
+为什么 cd 要在 Shell 主进程执行？
+fork、execvp、waitpid 分别做什么？
+dup2(fd, 1) 为什么能实现输出重定向？
+管道不用的端点为什么必须关闭？
+为什么“安装了 strace”不等于“成功跟踪了系统调用”？
+
+然后在 Word 中写几段你真实理解到的内容，保存为：
+
+docs/个人理解与体会.docx
+
+不需要写很长，也不需要声称独立编写代码。可以说明哪一个问题原先不理解、看过代码和结果后怎么理解了；仍不确定的地方也可以写出来。
+
+10．提交老师之前，最后检查
+
+打开 GitHub 仓库，确认：
+
+ src/myshell.c 能打开。
+ Makefile 在仓库根目录。
+ tests、logs、docs 都在。
+ 带截图的最新版报告能打开。
+ 完整聊天记录已经加入。
+ history.bundle 和 logs/git_history.log 已上传。
+ Actions 的实际结果已经核查，没有把失败标成通过。
+ 报告明确区分历史验证和新一次验证。
+ 老师能够访问仓库；私有仓库需给老师访问权限。
+ 你能解释前面的几个关键原理。
+
+提交给老师时，提供仓库链接和最终 PDF 报告，并按课程平台要求附交压缩包。
+
+你现在先做第1至第5步；文件传好后再运行 Actions。出现任何红色错误，把运行链接和错误发给我即可。
+
+今天 13:04
+下载哪个
+
+下载 linux-terminal-evidence。
+
+你现在打开的是任务日志页，截图显示运行已成功。接下来：
+
+点击浏览器返回，回到这次运行的总览页；或点击左侧 Summary（摘要）。
+向下滚动，找到 Artifacts（产物）。
+点击 linux-terminal-evidence，下载 ZIP 压缩包。
+不用解压，直接把 ZIP 上传到这里。
+
+我收到后会检查测试、strace 和截图，再更新报告。你现在这张“运行成功”的截图也保留，适合作为过程证据。
+
+os1.zip
+压缩归档
+你帮我把自己的理解补上就行
+
+已补好，报告现在共 26 页：
+
+第25页：理解与体会，结合代码解释 cd、进程、重定向、管道和 strace。
+第26页：GitHub 完整复验结果，已核对你上传的成功日志，并附截图。
+
+下载：
+
+最新版 Word 报告
+最新版 PDF 报告
+更新后的完整项目包
+
+请先读一遍第25页，确认能用自己的话解释，再上传新版报告到 GitHub。
+
+**还有一个缺项：**你提供的交互记录中间有跳段，仍需补齐开发过程对话；我没有把它标成完整记录。
+
+report-final.docx
+文档
+report-final.pdf
+PDF
