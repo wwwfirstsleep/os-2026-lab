@@ -1,0 +1,1566 @@
+970   execve("./myshell", ["./myshell"], 0x7ffd8ba5e8f8 /* 79 vars */) = 0
+970   brk(NULL)                         = 0x5611f7e7b000
+970   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe7a8874000
+970   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+970   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+970   fstat(3, {st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+970   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe7a886b000
+970   close(3)                          = 0
+970   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+970   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+970   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+970   fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+970   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+970   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe7a8659000
+970   mmap(0x7fe7a8681000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fe7a8681000
+970   mmap(0x7fe7a8809000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7fe7a8809000
+970   mmap(0x7fe7a8858000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7fe7a8858000
+970   mmap(0x7fe7a885e000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe7a885e000
+970   close(3)                          = 0
+970   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe7a8656000
+970   arch_prctl(ARCH_SET_FS, 0x7fe7a8656740) = 0
+970   set_tid_address(0x7fe7a8656a10)   = 970
+970   set_robust_list(0x7fe7a8656a20, 24) = 0
+970   rseq(0x7fe7a8657060, 0x20, 0, 0x53053053) = 0
+970   mprotect(0x7fe7a8858000, 16384, PROT_READ) = 0
+970   mprotect(0x5611f6cba000, 4096, PROT_READ) = 0
+970   mprotect(0x7fe7a88b4000, 8192, PROT_READ) = 0
+970   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+970   munmap(0x7fe7a886b000, 34015)     = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   getrandom("\x8c\x1d\x87\xcf\x95\xba\x91\xd6", 8, GRND_NONBLOCK) = 8
+970   brk(NULL)                         = 0x5611f7e7b000
+970   brk(0x5611f7e9c000)               = 0x5611f7e9c000
+970   read(0, "p", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   getcwd("/workspace/scratch/876e69c55179/myshell", 4096) = 40
+970   fstat(1, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+970   write(1, "/workspace/scratch/876e69c55179/"..., 40) = 40
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "c", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "m", 1)                   = 1
+970   read(0, "p", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   chdir("/tmp")                     = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "p", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   getcwd("/tmp", 4096)              = 5
+970   write(1, "/tmp\n", 5)             = 5
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "c", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "k", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "p", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "8", 1)                   = 1
+970   read(0, "7", 1)                   = 1
+970   read(0, "6", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "6", 1)                   = 1
+970   read(0, "9", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "5", 1)                   = 1
+970   read(0, "5", 1)                   = 1
+970   read(0, "1", 1)                   = 1
+970   read(0, "7", 1)                   = 1
+970   read(0, "9", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "m", 1)                   = 1
+970   read(0, "y", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "m", 1)                   = 1
+970   read(0, "p", 1)                   = 1
+970   read(0, "/", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   chdir("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace") = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "p", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   getcwd("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace", 4096) = 56
+970   write(1, "/workspace/scratch/876e69c55179/"..., 56) = 56
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "t", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "u", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT, 0666) = 3
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "e", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "-", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, ">", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   write(1, "trace-data\n", 11)      = 11
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "c", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   openat(AT_FDCWD, "test.txt", O_RDONLY) = 3
+970   read(3, "trace-data\n", 8192)     = 11
+970   write(1, "trace-data\n", 11)      = 11
+970   read(3, "", 8192)                 = 0
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "l", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "-", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 971
+970   wait4(971,  <unfinished ...>
+971   set_robust_list(0x7fe7a8656a20, 24) = 0
+971   execve("/root/.codex/tmp/arg0/codex-arg0An99UK/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/opt/codex/codex-path/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/usr/local/sbin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/usr/local/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/usr/sbin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+971   execve("/usr/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = 0
+971   brk(NULL)                         = 0x561abdbc6000
+971   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8757d71000
+971   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+971   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8757d68000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+971   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=174472, ...}) = 0
+971   mmap(NULL, 181960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8757d3b000
+971   mmap(0x7f8757d41000, 118784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f8757d41000
+971   mmap(0x7f8757d5e000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x23000) = 0x7f8757d5e000
+971   mmap(0x7f8757d64000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7f8757d64000
+971   mmap(0x7f8757d66000, 5832, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8757d66000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+971   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+971   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+971   fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+971   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+971   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8757b29000
+971   mmap(0x7f8757b51000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f8757b51000
+971   mmap(0x7f8757cd9000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7f8757cd9000
+971   mmap(0x7f8757d28000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7f8757d28000
+971   mmap(0x7f8757d2e000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8757d2e000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+971   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=625344, ...}) = 0
+971   mmap(NULL, 627472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8757a8f000
+971   mmap(0x7f8757a91000, 450560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f8757a91000
+971   mmap(0x7f8757aff000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x70000) = 0x7f8757aff000
+971   mmap(0x7f8757b27000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x97000) = 0x7f8757b27000
+971   close(3)                          = 0
+971   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8757a8c000
+971   arch_prctl(ARCH_SET_FS, 0x7f8757a8c800) = 0
+971   set_tid_address(0x7f8757a8cad0)   = 971
+971   set_robust_list(0x7f8757a8cae0, 24) = 0
+971   rseq(0x7f8757a8d120, 0x20, 0, 0x53053053) = 0
+971   mprotect(0x7f8757d28000, 16384, PROT_READ) = 0
+971   mprotect(0x7f8757b27000, 4096, PROT_READ) = 0
+971   mprotect(0x7f8757d64000, 4096, PROT_READ) = 0
+971   mprotect(0x561a991e0000, 8192, PROT_READ) = 0
+971   mprotect(0x7f8757db1000, 8192, PROT_READ) = 0
+971   prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+971   munmap(0x7f8757d68000, 34015)     = 0
+971   statfs("/sys/fs/selinux", {f_type=SYSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0x37270330, 0x15b75c53]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+971   statfs("/selinux", 0x7ffc42b9cf50) = -1 ENOENT (No such file or directory)
+971   getrandom("\xf4\xe2\xbf\xd3\x31\x39\xaa\xb6", 8, GRND_NONBLOCK) = 8
+971   brk(NULL)                         = 0x561abdbc6000
+971   brk(0x561abdbe7000)               = 0x561abdbe7000
+971   openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+971   read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tpr"..., 1024) = 330
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/proc/mounts", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+971   read(3, "overlay / overlay rw,relatime,lo"..., 1024) = 1023
+971   read(3, "", 1024)                 = 0
+971   close(3)                          = 0
+971   access("/etc/selinux/config", F_OK) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0
+971   mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f87577a1000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+971   read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+971   read(3, "", 4096)                 = 0
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+971   mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8757d70000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+971   mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0x7f8757d69000
+971   close(3)                          = 0
+971   futex(0x7f8757d2d72c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+971   mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8757d68000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+971   mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f87577a0000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+971   mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779f000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+971   mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779e000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+971   mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779d000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFDIR|0755, st_size=54, ...}) = 0
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+971   mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779c000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+971   mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779b000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+971   mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875779a000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+971   mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8757799000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+971   mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8757798000
+971   close(3)                          = 0
+971   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+971   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+971   mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f875773f000
+971   close(3)                          = 0
+971   ioctl(1, TCGETS, 0x7ffc42b9cdf0)  = -1 ENOTTY (Inappropriate ioctl for device)
+971   openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+971   fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+971   getdents64(3, 0x561abdbcfb00 /* 4 entries */, 32768) = 112
+971   statx(AT_FDCWD, "test.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=11, ...}) = 0
+971   lgetxattr("test.txt", "security.selinux", 0x561abdbd7b10, 255) = -1 ENODATA (No data available)
+971   listxattr("test.txt", "", 152)    = 0
+971   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+971   connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+971   close(4)                          = 0
+971   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+971   connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+971   close(4)                          = 0
+971   newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=494, ...}, 0) = 0
+971   newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+971   openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+971   fstat(4, {st_mode=S_IFREG|0644, st_size=494, ...}) = 0
+971   read(4, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 494
+971   read(4, "", 4096)                 = 0
+971   fstat(4, {st_mode=S_IFREG|0644, st_size=494, ...}) = 0
+971   close(4)                          = 0
+971   openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+971   fstat(4, {st_mode=S_IFREG|0644, st_size=1091, ...}) = 0
+971   lseek(4, 0, SEEK_SET)             = 0
+971   read(4, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1091
+971   close(4)                          = 0
+971   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+971   connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+971   close(4)                          = 0
+971   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+971   connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+971   close(4)                          = 0
+971   newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=494, ...}, 0) = 0
+971   openat(AT_FDCWD, "/etc/group", O_RDONLY|O_CLOEXEC) = 4
+971   fstat(4, {st_mode=S_IFREG|0644, st_size=537, ...}) = 0
+971   lseek(4, 0, SEEK_SET)             = 0
+971   read(4, "root:x:0:\ndaemon:x:1:\nbin:x:2:\ns"..., 4096) = 537
+971   close(4)                          = 0
+971   statx(AT_FDCWD, "out.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=12, ...}) = 0
+971   lgetxattr("out.txt", "security.selinux", 0x561abdbd81f0, 255) = -1 ENODATA (No data available)
+971   listxattr("out.txt", "", 152)     = 0
+971   getdents64(3, 0x561abdbcfb00 /* 0 entries */, 32768) = 0
+971   close(3)                          = 0
+971   fstat(1, {st_mode=S_IFREG|0644, st_size=112, ...}) = 0
+971   openat(AT_FDCWD, "/usr/share/zoneinfo/America/Los_Angeles", O_RDONLY|O_CLOEXEC) = 3
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=2852, ...}) = 0
+971   fstat(3, {st_mode=S_IFREG|0644, st_size=2852, ...}) = 0
+971   read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0\0\6\0\0\0\0"..., 4096) = 2852
+971   lseek(3, -1810, SEEK_CUR)         = 1042
+971   read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0\0\6\0\0\0\0"..., 4096) = 1810
+971   close(3)                          = 0
+971   write(1, "total 8\n-rw-r--r-- 1 root root 1"..., 103) = 103
+971   close(1)                          = 0
+971   close(2)                          = 0
+971   exit_group(0)                     = ?
+971   +++ exited with 0 +++
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 971
+970   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=971, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "e", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, ">", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "u", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   write(1, "hello\n", 6)            = 6
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "e", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "d", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, ">", 1)                   = 1
+970   read(0, ">", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "u", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   write(1, "world\n", 6)            = 6
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "c", 1)                   = 1
+970   read(0, "a", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "<", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, "u", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   fcntl(0, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+970   dup2(4, 0)                        = 0
+970   close(4)                          = 0
+970   read(0, "hello\nworld\n", 8192)   = 12
+970   write(1, "hello\nworld\n", 12)    = 12
+970   read(0, "", 8192)                 = 0
+970   dup2(3, 0)                        = 0
+970   close(3)                          = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "l", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "|", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "-", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   pipe2([3, 4], 0)                  = 0
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 972
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+972   set_robust_list(0x7fe7a8656a20, 24) = 0
+970   <... clone resumed>, child_tidptr=0x7fe7a8656a10) = 973
+970   close(3 <unfinished ...>
+972   dup2(4, 1 <unfinished ...>
+970   <... close resumed>)              = 0
+970   close(4 <unfinished ...>
+972   <... dup2 resumed>)               = 1
+970   <... close resumed>)              = 0
+970   wait4(972,  <unfinished ...>
+973   set_robust_list(0x7fe7a8656a20, 24) = 0
+972   close(3)                          = 0
+973   dup2(3, 0 <unfinished ...>
+972   close(4 <unfinished ...>
+973   <... dup2 resumed>)               = 0
+972   <... close resumed>)              = 0
+973   close(3)                          = 0
+973   close(4 <unfinished ...>
+972   execve("/root/.codex/tmp/arg0/codex-arg0An99UK/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   <... close resumed>)              = 0
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   execve("/root/.codex/tmp/arg0/codex-arg0An99UK/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   execve("/opt/codex/codex-path/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   execve("/opt/codex/codex-path/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/usr/local/sbin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/usr/local/sbin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/usr/local/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/usr/local/bin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/usr/sbin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/usr/sbin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+972   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+973   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+972   execve("/usr/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+973   execve("/usr/bin/wc", ["wc", "-l"], 0x7ffde982a288 /* 79 vars */) = 0
+972   <... execve resumed>)             = 0
+973   brk(NULL <unfinished ...>
+972   brk(NULL <unfinished ...>
+973   <... brk resumed>)                = 0x55fde0161000
+972   <... brk resumed>)                = 0x55be098cf000
+973   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+972   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe39056d000
+972   <... mmap resumed>)               = 0x7fafdc322000
+973   access("/etc/ld.so.preload", R_OK <unfinished ...>
+972   access("/etc/ld.so.preload", R_OK <unfinished ...>
+973   <... access resumed>)             = -1 ENOENT (No such file or directory)
+972   <... access resumed>)             = -1 ENOENT (No such file or directory)
+973   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+973   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390564000
+972   <... mmap resumed>)               = 0x7fafdc319000
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   <... close resumed>)              = 0
+972   <... close resumed>)              = 0
+973   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... openat resumed>)             = 3
+973   read(3,  <unfinished ...>
+972   read(3,  <unfinished ...>
+973   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+972   <... read resumed>"\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+973   pread64(3,  <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=174472, ...}) = 0
+973   fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+972   mmap(NULL, 181960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+973   pread64(3,  <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc2ec000
+973   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+972   mmap(0x7fafdc2f2000, 118784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000 <unfinished ...>
+973   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc2f2000
+973   <... mmap resumed>)               = 0x7fe390352000
+972   mmap(0x7fafdc30f000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x23000 <unfinished ...>
+973   mmap(0x7fe39037a000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc30f000
+973   <... mmap resumed>)               = 0x7fe39037a000
+972   mmap(0x7fafdc315000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000 <unfinished ...>
+973   mmap(0x7fe390502000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7fe390502000
+972   <... mmap resumed>)               = 0x7fafdc315000
+973   mmap(0x7fe390551000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7fe390551000
+972   mmap(0x7fafdc317000, 5832, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+973   mmap(0x7fe390557000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc317000
+973   <... mmap resumed>)               = 0x7fe390557000
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... close resumed>)              = 0
+972   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe39034f000
+972   <... openat resumed>)             = 3
+973   arch_prctl(ARCH_SET_FS, 0x7fe39034f740 <unfinished ...>
+972   read(3,  <unfinished ...>
+973   <... arch_prctl resumed>)         = 0
+973   set_tid_address(0x7fe39034fa10 <unfinished ...>
+972   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+973   <... set_tid_address resumed>)    = 973
+972   pread64(3,  <unfinished ...>
+973   set_robust_list(0x7fe39034fa20, 24 <unfinished ...>
+972   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+973   <... set_robust_list resumed>)    = 0
+972   fstat(3,  <unfinished ...>
+973   rseq(0x7fe390350060, 0x20, 0, 0x53053053 <unfinished ...>
+972   <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+973   <... rseq resumed>)               = 0
+972   pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+972   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fafdc0da000
+972   mmap(0x7fafdc102000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fafdc102000
+973   mprotect(0x7fe390551000, 16384, PROT_READ <unfinished ...>
+972   mmap(0x7fafdc28a000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000 <unfinished ...>
+973   <... mprotect resumed>)           = 0
+972   <... mmap resumed>)               = 0x7fafdc28a000
+972   mmap(0x7fafdc2d9000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000 <unfinished ...>
+973   mprotect(0x55fdb36d9000, 4096, PROT_READ <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc2d9000
+973   <... mprotect resumed>)           = 0
+972   mmap(0x7fafdc2df000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+973   mprotect(0x7fe3905ad000, 8192, PROT_READ <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc2df000
+973   <... mprotect resumed>)           = 0
+972   close(3 <unfinished ...>
+973   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+972   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   munmap(0x7fe390564000, 34015 <unfinished ...>
+972   <... openat resumed>)             = 3
+973   <... munmap resumed>)             = 0
+972   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=625344, ...}) = 0
+972   mmap(NULL, 627472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fafdc040000
+972   mmap(0x7fafdc042000, 450560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000 <unfinished ...>
+973   getrandom("\xf6\xe0\xef\xa0\x6a\xb8\xec\xea", 8, GRND_NONBLOCK) = 8
+972   <... mmap resumed>)               = 0x7fafdc042000
+973   brk(NULL <unfinished ...>
+972   mmap(0x7fafdc0b0000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x70000 <unfinished ...>
+973   <... brk resumed>)                = 0x55fde0161000
+973   brk(0x55fde0182000 <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc0b0000
+973   <... brk resumed>)                = 0x55fde0182000
+972   mmap(0x7fafdc0d8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x97000 <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc0d8000
+973   <... openat resumed>)             = 3
+972   close(3 <unfinished ...>
+973   fstat(3,  <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0
+973   mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390064000
+972   <... mmap resumed>)               = 0x7fafdc03d000
+973   close(3 <unfinished ...>
+972   arch_prctl(ARCH_SET_FS, 0x7fafdc03d800 <unfinished ...>
+973   <... close resumed>)              = 0
+972   <... arch_prctl resumed>)         = 0
+972   set_tid_address(0x7fafdc03dad0 <unfinished ...>
+973   openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... set_tid_address resumed>)    = 972
+973   <... openat resumed>)             = 3
+972   set_robust_list(0x7fafdc03dae0, 24 <unfinished ...>
+973   fstat(3,  <unfinished ...>
+972   <... set_robust_list resumed>)    = 0
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+972   rseq(0x7fafdc03e120, 0x20, 0, 0x53053053 <unfinished ...>
+973   read(3,  <unfinished ...>
+972   <... rseq resumed>)               = 0
+973   <... read resumed>"# Locale name alias data base.\n#"..., 4096) = 2996
+973   read(3, "", 4096)                 = 0
+973   close(3)                          = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   mprotect(0x7fafdc2d9000, 16384, PROT_READ <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... mprotect resumed>)           = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   mprotect(0x7fafdc0d8000, 4096, PROT_READ <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... mprotect resumed>)           = 0
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+973   mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe39056c000
+972   mprotect(0x7fafdc315000, 4096, PROT_READ <unfinished ...>
+973   close(3)                          = 0
+972   <... mprotect resumed>)           = 0
+973   openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+972   mprotect(0x55bdeac83000, 8192, PROT_READ <unfinished ...>
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+972   <... mprotect resumed>)           = 0
+973   mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0x7fe390565000
+972   mprotect(0x7fafdc362000, 8192, PROT_READ <unfinished ...>
+973   close(3)                          = 0
+972   <... mprotect resumed>)           = 0
+973   futex(0x7fe39055672c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+972   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+973   <... futex resumed>)              = 0
+972   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   munmap(0x7fafdc319000, 34015 <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... munmap resumed>)             = 0
+973   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   statfs("/sys/fs/selinux",  <unfinished ...>
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+972   <... statfs resumed>{f_type=SYSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0x37270330, 0x15b75c53]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+973   mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   statfs("/selinux",  <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390564000
+972   <... statfs resumed>0x7ffd384ba880) = -1 ENOENT (No such file or directory)
+973   close(3)                          = 0
+972   getrandom( <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... getrandom resumed>"\x51\x2e\x3b\xff\x5d\xcf\x78\x58", 8, GRND_NONBLOCK) = 8
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   brk(NULL <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... brk resumed>)                = 0x55be098cf000
+973   fstat(3,  <unfinished ...>
+972   brk(0x55be098f0000 <unfinished ...>
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+972   <... brk resumed>)                = 0x55be098f0000
+973   mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe390063000
+972   openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   close(3)                          = 0
+972   <... openat resumed>)             = 3
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... fstat resumed>{st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   read(3,  <unfinished ...>
+973   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   <... read resumed>"nodev\tsysfs\nnodev\ttmpfs\nnodev\tpr"..., 1024) = 330
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+973   mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   close(3 <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390062000
+972   <... close resumed>)              = 0
+973   close(3 <unfinished ...>
+972   openat(AT_FDCWD, "/proc/mounts", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... close resumed>)              = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... openat resumed>)             = 3
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   fstat(3,  <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... fstat resumed>{st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+973   <... openat resumed>)             = 3
+972   read(3,  <unfinished ...>
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+973   mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   <... read resumed>"overlay / overlay rw,relatime,lo"..., 1024) = 1023
+973   <... mmap resumed>)               = 0x7fe390061000
+972   read(3,  <unfinished ...>
+973   close(3 <unfinished ...>
+972   <... read resumed>"", 1024)       = 0
+973   <... close resumed>)              = 0
+972   close(3 <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   access("/etc/selinux/config", F_OK <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... access resumed>)             = -1 ENOENT (No such file or directory)
+973   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+972   <... openat resumed>)             = 3
+973   mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390060000
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0
+973   close(3)                          = 0
+972   mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdbd52000
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   close(3 <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... openat resumed>)             = 3
+972   openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   fstat(3, {st_mode=S_IFDIR|0755, st_size=54, ...}) = 0
+972   <... openat resumed>)             = 3
+973   close(3 <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... close resumed>)              = 0
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   read(3,  <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... read resumed>"# Locale name alias data base.\n#"..., 4096) = 2996
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+972   read(3,  <unfinished ...>
+973   mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   <... read resumed>"", 4096)       = 0
+973   <... mmap resumed>)               = 0x7fe39005f000
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... close resumed>)              = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   <... openat resumed>)             = 3
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+972   fstat(3,  <unfinished ...>
+973   mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+973   <... mmap resumed>)               = 0x7fe39005e000
+972   mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+973   close(3)                          = 0
+972   <... mmap resumed>)               = 0x7fafdc321000
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   close(3 <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... close resumed>)              = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+972   openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+972   <... openat resumed>)             = 3
+973   mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe39005d000
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+973   close(3 <unfinished ...>
+972   mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0 <unfinished ...>
+973   <... close resumed>)              = 0
+972   <... mmap resumed>)               = 0x7fafdc31a000
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   close(3 <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... close resumed>)              = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   futex(0x7fafdc2de72c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+973   <... openat resumed>)             = 3
+972   <... futex resumed>)              = 0
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+973   <... mmap resumed>)               = 0x7fe39005c000
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   close(3)                          = 0
+972   <... openat resumed>)             = 3
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   fstat(3,  <unfinished ...>
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+973   <... openat resumed>)             = 3
+973   fstat(3,  <unfinished ...>
+972   <... mmap resumed>)               = 0x7fafdc319000
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+972   close(3 <unfinished ...>
+973   mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   <... close resumed>)              = 0
+973   <... mmap resumed>)               = 0x7fe39005b000
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   close(3 <unfinished ...>
+972   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+973   <... close resumed>)              = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... openat resumed>)             = 3
+973   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+972   fstat(3,  <unfinished ...>
+973   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+972   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+973   <... openat resumed>)             = 3
+972   mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+973   fstat(3, {st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+972   <... mmap resumed>)               = 0x7fafdbd51000
+973   mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+972   close(3 <unfinished ...>
+973   <... mmap resumed>)               = 0x7fe390002000
+972   <... close resumed>)              = 0
+973   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+973   fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL) = -1 ESPIPE (Illegal seek)
+972   <... openat resumed>)             = 3
+973   read(0,  <unfinished ...>
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+972   mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd50000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+972   mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4f000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+972   mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4e000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFDIR|0755, st_size=54, ...}) = 0
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+972   mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4d000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+972   mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4c000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+972   mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4b000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+972   mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd4a000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+972   mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbd49000
+972   close(3)                          = 0
+972   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+972   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+972   fstat(3, {st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+972   mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fafdbcf0000
+972   close(3)                          = 0
+972   ioctl(1, TCGETS, 0x7ffd384ba720)  = -1 ENOTTY (Inappropriate ioctl for device)
+972   openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+972   fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+972   getdents64(3, 0x55be098d8910 /* 4 entries */, 32768) = 112
+972   getdents64(3, 0x55be098d8910 /* 0 entries */, 32768) = 0
+972   close(3)                          = 0
+972   fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+972   write(1, "out.txt\ntest.txt\n", 17) = 17
+972   close(1 <unfinished ...>
+973   <... read resumed>"out.txt\ntest.txt\n", 16320) = 17
+972   <... close resumed>)              = 0
+973   read(0,  <unfinished ...>
+972   close(2 <unfinished ...>
+973   <... read resumed>"", 16320)      = 0
+972   <... close resumed>)              = 0
+973   fstat(1,  <unfinished ...>
+972   exit_group(0 <unfinished ...>
+973   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=227, ...}) = 0
+972   <... exit_group resumed>)         = ?
+973   write(1, "2\n", 2)                = 2
+973   close(0)                          = 0
+972   +++ exited with 0 +++
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 972
+973   close(1 <unfinished ...>
+970   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=972, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+973   <... close resumed>)              = 0
+973   close(2)                          = 0
+970   wait4(973,  <unfinished ...>
+973   exit_group(0)                     = ?
+973   +++ exited with 0 +++
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 973
+970   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=973, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "p", 1)                   = 1
+970   read(0, "r", 1)                   = 1
+970   read(0, "i", 1)                   = 1
+970   read(0, "n", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "f", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "h", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "l", 1)                   = 1
+970   read(0, "o", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "|", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "w", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "-", 1)                   = 1
+970   read(0, "c", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   pipe2([3, 4], 0)                  = 0
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 974
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+974   set_robust_list(0x7fe7a8656a20, 24) = 0
+970   <... clone resumed>, child_tidptr=0x7fe7a8656a10) = 975
+974   dup2(4, 1 <unfinished ...>
+970   close(3 <unfinished ...>
+974   <... dup2 resumed>)               = 1
+970   <... close resumed>)              = 0
+975   set_robust_list(0x7fe7a8656a20, 24 <unfinished ...>
+970   close(4 <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... set_robust_list resumed>)    = 0
+974   <... close resumed>)              = 0
+970   <... close resumed>)              = 0
+975   dup2(3, 0 <unfinished ...>
+974   close(4 <unfinished ...>
+970   wait4(974,  <unfinished ...>
+975   <... dup2 resumed>)               = 0
+974   <... close resumed>)              = 0
+975   close(3)                          = 0
+975   close(4 <unfinished ...>
+974   execve("/root/.codex/tmp/arg0/codex-arg0An99UK/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   execve("/root/.codex/tmp/arg0/codex-arg0An99UK/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   execve("/opt/codex/codex-path/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+974   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   execve("/opt/codex/codex-path/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/override/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   execve("/usr/local/sbin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   execve("/opt/codex/runtimes/codex-primary-runtime/dependencies/bin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   execve("/usr/local/bin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   execve("/usr/local/sbin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   execve("/usr/sbin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   execve("/usr/local/bin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+975   <... execve resumed>)             = -1 ENOENT (No such file or directory)
+974   execve("/usr/bin/printf", ["printf", "hello"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+975   execve("/usr/sbin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */) = -1 ENOENT (No such file or directory)
+975   execve("/usr/bin/wc", ["wc", "-c"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+974   <... execve resumed>)             = 0
+974   brk(NULL)                         = 0x55f9654ab000
+975   <... execve resumed>)             = 0
+975   brk(NULL)                         = 0x5611fdda6000
+974   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+975   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2ae45000
+975   <... mmap resumed>)               = 0x7fe7eee90000
+974   access("/etc/ld.so.preload", R_OK <unfinished ...>
+975   access("/etc/ld.so.preload", R_OK <unfinished ...>
+974   <... access resumed>)             = -1 ENOENT (No such file or directory)
+975   <... access resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = 3
+975   fstat(3,  <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34015, ...}) = 0
+975   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   mmap(NULL, 34015, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eee87000
+974   <... mmap resumed>)               = 0x7fed2ae3c000
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = 3
+975   read(3,  <unfinished ...>
+974   read(3,  <unfinished ...>
+975   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+974   <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+975   pread64(3,  <unfinished ...>
+974   pread64(3,  <unfinished ...>
+975   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+974   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+975   fstat(3,  <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+974   <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+975   pread64(3,  <unfinished ...>
+974   pread64(3,  <unfinished ...>
+975   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+974   <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+975   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+974   mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eec75000
+974   <... mmap resumed>)               = 0x7fed2ac2a000
+975   mmap(0x7fe7eec9d000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+974   mmap(0x7fed2ac52000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eec9d000
+974   <... mmap resumed>)               = 0x7fed2ac52000
+975   mmap(0x7fe7eee25000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000 <unfinished ...>
+974   mmap(0x7fed2adda000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eee25000
+974   <... mmap resumed>)               = 0x7fed2adda000
+975   mmap(0x7fe7eee74000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000 <unfinished ...>
+974   mmap(0x7fed2ae29000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eee74000
+974   <... mmap resumed>)               = 0x7fed2ae29000
+975   mmap(0x7fe7eee7a000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+974   mmap(0x7fed2ae2f000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eee7a000
+974   <... mmap resumed>)               = 0x7fed2ae2f000
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... close resumed>)              = 0
+975   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+974   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eec72000
+974   <... mmap resumed>)               = 0x7fed2ac27000
+975   arch_prctl(ARCH_SET_FS, 0x7fe7eec72740 <unfinished ...>
+974   arch_prctl(ARCH_SET_FS, 0x7fed2ac27740 <unfinished ...>
+975   <... arch_prctl resumed>)         = 0
+974   <... arch_prctl resumed>)         = 0
+975   set_tid_address(0x7fe7eec72a10 <unfinished ...>
+974   set_tid_address(0x7fed2ac27a10 <unfinished ...>
+975   <... set_tid_address resumed>)    = 975
+974   <... set_tid_address resumed>)    = 974
+975   set_robust_list(0x7fe7eec72a20, 24 <unfinished ...>
+974   set_robust_list(0x7fed2ac27a20, 24) = 0
+975   <... set_robust_list resumed>)    = 0
+974   rseq(0x7fed2ac28060, 0x20, 0, 0x53053053 <unfinished ...>
+975   rseq(0x7fe7eec73060, 0x20, 0, 0x53053053 <unfinished ...>
+974   <... rseq resumed>)               = 0
+975   <... rseq resumed>)               = 0
+975   mprotect(0x7fe7eee74000, 16384, PROT_READ <unfinished ...>
+974   mprotect(0x7fed2ae29000, 16384, PROT_READ <unfinished ...>
+975   <... mprotect resumed>)           = 0
+974   <... mprotect resumed>)           = 0
+974   mprotect(0x55f93c610000, 4096, PROT_READ <unfinished ...>
+975   mprotect(0x5611d2e29000, 4096, PROT_READ <unfinished ...>
+974   <... mprotect resumed>)           = 0
+975   <... mprotect resumed>)           = 0
+975   mprotect(0x7fe7eeed0000, 8192, PROT_READ <unfinished ...>
+974   mprotect(0x7fed2ae85000, 8192, PROT_READ <unfinished ...>
+975   <... mprotect resumed>)           = 0
+974   <... mprotect resumed>)           = 0
+975   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+974   prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+975   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+974   <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+975   munmap(0x7fe7eee87000, 34015)     = 0
+974   munmap(0x7fed2ae3c000, 34015)     = 0
+974   getrandom("\x4d\x10\x0e\x12\x06\x33\xf9\xae", 8, GRND_NONBLOCK) = 8
+975   getrandom( <unfinished ...>
+974   brk(NULL <unfinished ...>
+975   <... getrandom resumed>"\x0b\xb2\x6c\xcd\xb1\xa0\x42\x64", 8, GRND_NONBLOCK) = 8
+974   <... brk resumed>)                = 0x55f9654ab000
+975   brk(NULL <unfinished ...>
+974   brk(0x55f9654cc000 <unfinished ...>
+975   <... brk resumed>)                = 0x5611fdda6000
+974   <... brk resumed>)                = 0x55f9654cc000
+975   brk(0x5611fddc7000)               = 0x5611fddc7000
+974   openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... openat resumed>)             = 3
+974   fstat(3,  <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0
+974   mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a93c000
+975   <... mmap resumed>)               = 0x7fe7ee987000
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = 3
+975   fstat(3,  <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+975   read(3,  <unfinished ...>
+974   read(3,  <unfinished ...>
+975   <... read resumed>"# Locale name alias data base.\n#"..., 4096) = 2996
+974   <... read resumed>"# Locale name alias data base.\n#"..., 4096) = 2996
+975   read(3,  <unfinished ...>
+974   read(3,  <unfinished ...>
+975   <... read resumed>"", 4096)       = 0
+974   <... read resumed>"", 4096)       = 0
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = 3
+975   fstat(3,  <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+975   mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7eee8f000
+974   <... mmap resumed>)               = 0x7fed2ae44000
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... close resumed>)              = 0
+974   openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... openat resumed>)             = 3
+974   fstat(3,  <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+974   mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0 <unfinished ...>
+975   mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0 <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2ae3d000
+975   <... mmap resumed>)               = 0x7fe7eee88000
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... close resumed>)              = 0
+974   futex(0x7fed2ae2e72c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+975   futex(0x7fe7eee7972c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+974   <... futex resumed>)              = 0
+975   <... futex resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+974   fstat(3, {st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... mmap resumed>)               = 0x7fed2ae3c000
+975   fstat(3,  <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+974   <... close resumed>)              = 0
+975   mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe7eee87000
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   <... close resumed>)              = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+974   fstat(3, {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+974   mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a93b000
+974   close(3)                          = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+974   fstat(3, {st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+975   <... openat resumed>)             = 3
+974   mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a93a000
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+974   close(3 <unfinished ...>
+975   mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... mmap resumed>)               = 0x7fe7ee986000
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   <... close resumed>)              = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   fstat(3,  <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+975   <... openat resumed>)             = 3
+974   mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a939000
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+974   close(3 <unfinished ...>
+975   mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... mmap resumed>)               = 0x7fe7ee985000
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   <... close resumed>)              = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   fstat(3,  <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+975   <... openat resumed>)             = 3
+974   mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a938000
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+974   close(3 <unfinished ...>
+975   mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... mmap resumed>)               = 0x7fe7ee984000
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   <... close resumed>)              = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... fstat resumed>{st_mode=S_IFDIR|0755, st_size=54, ...}) = 0
+975   fstat(3, {st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+974   close(3 <unfinished ...>
+975   mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... mmap resumed>)               = 0x7fe7ee983000
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... close resumed>)              = 0
+974   fstat(3,  <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... openat resumed>)             = 3
+975   fstat(3,  <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a937000
+975   <... fstat resumed>{st_mode=S_IFDIR|0755, st_size=54, ...}) = 0
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   fstat(3,  <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+974   <... openat resumed>)             = 3
+975   mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7ee982000
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+975   close(3 <unfinished ...>
+974   mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... mmap resumed>)               = 0x7fed2a936000
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   fstat(3,  <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+974   <... openat resumed>)             = 3
+974   fstat(3,  <unfinished ...>
+975   mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+975   <... mmap resumed>)               = 0x7fe7ee981000
+974   mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a935000
+975   <... close resumed>)              = 0
+974   close(3 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   fstat(3,  <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+974   <... openat resumed>)             = 3
+975   mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7ee980000
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+975   close(3 <unfinished ...>
+974   mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   <... close resumed>)              = 0
+974   <... mmap resumed>)               = 0x7fed2a934000
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   close(3 <unfinished ...>
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   <... close resumed>)              = 0
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... openat resumed>)             = 3
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   fstat(3,  <unfinished ...>
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+974   <... openat resumed>)             = 3
+975   mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   fstat(3,  <unfinished ...>
+975   <... mmap resumed>)               = 0x7fe7ee97f000
+975   close(3 <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+975   <... close resumed>)              = 0
+974   mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a933000
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   close(3 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... openat resumed>)             = 3
+974   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   fstat(3,  <unfinished ...>
+974   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+974   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+975   mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+974   <... openat resumed>)             = 3
+975   <... mmap resumed>)               = 0x7fe7ee97e000
+974   fstat(3,  <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+975   <... close resumed>)              = 0
+974   mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... mmap resumed>)               = 0x7fed2a8da000
+975   <... openat resumed>)             = -1 ENOENT (No such file or directory)
+974   close(3 <unfinished ...>
+975   openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC <unfinished ...>
+974   <... close resumed>)              = 0
+975   <... openat resumed>)             = 3
+975   fstat(3,  <unfinished ...>
+974   fstat(1,  <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+974   <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+975   mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe7ee925000
+974   write(1, "hello", 5 <unfinished ...>
+975   close(3 <unfinished ...>
+974   <... write resumed>)              = 5
+975   <... close resumed>)              = 0
+974   close(1)                          = 0
+975   fstat(0,  <unfinished ...>
+974   close(2 <unfinished ...>
+975   <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+974   <... close resumed>)              = 0
+975   fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL) = -1 ESPIPE (Illegal seek)
+974   exit_group(0 <unfinished ...>
+975   read(0,  <unfinished ...>
+974   <... exit_group resumed>)         = ?
+975   <... read resumed>"hello", 16384) = 5
+975   read(0, "", 16384)                = 0
+974   +++ exited with 0 +++
+975   fstat(1,  <unfinished ...>
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 974
+975   <... fstat resumed>{st_mode=S_IFREG|0644, st_size=229, ...}) = 0
+970   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=974, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+975   write(1, "5\n", 2 <unfinished ...>
+970   wait4(975,  <unfinished ...>
+975   <... write resumed>)              = 2
+975   close(0)                          = 0
+975   close(1)                          = 0
+975   close(2)                          = 0
+975   exit_group(0)                     = ?
+975   +++ exited with 0 +++
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 975
+970   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=975, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "r", 1)                   = 1
+970   read(0, "m", 1)                   = 1
+970   read(0, " ", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "e", 1)                   = 1
+970   read(0, "s", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, ".", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   unlink("test.txt")                = 0
+970   ioctl(0, TCGETS, 0x7ffde98287f0)  = -1 ENOTTY (Inappropriate ioctl for device)
+970   read(0, "e", 1)                   = 1
+970   read(0, "x", 1)                   = 1
+970   read(0, "i", 1)                   = 1
+970   read(0, "t", 1)                   = 1
+970   read(0, "\n", 1)                  = 1
+970   exit_group(0)                     = ?
+970   +++ exited with 0 +++

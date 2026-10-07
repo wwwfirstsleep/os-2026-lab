@@ -1,0 +1,24 @@
+970   dup2(4, 1)                        = 1
+970   dup2(3, 1)                        = 1
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 971
+970   wait4(971,  <unfinished ...>
+970   dup2(4, 1)                        = 1
+970   dup2(3, 1)                        = 1
+970   dup2(4, 1)                        = 1
+970   dup2(3, 1)                        = 1
+970   dup2(4, 0)                        = 0
+970   dup2(3, 0)                        = 0
+970   pipe2([3, 4], 0)                  = 0
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 972
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+972   dup2(4, 1 <unfinished ...>
+970   wait4(972,  <unfinished ...>
+973   dup2(3, 0 <unfinished ...>
+970   wait4(973,  <unfinished ...>
+970   pipe2([3, 4], 0)                  = 0
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 974
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+974   dup2(4, 1 <unfinished ...>
+975   dup2(3, 0 <unfinished ...>
+970   wait4(974,  <unfinished ...>
+970   wait4(975,  <unfinished ...>

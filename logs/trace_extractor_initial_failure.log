@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/876e69c55179/myshell/tests/extract_trace.py", line 18, in <module>
+    assert re.search(pattern, text), pattern
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: execve\("[^"\n]*/ls".*= 0$

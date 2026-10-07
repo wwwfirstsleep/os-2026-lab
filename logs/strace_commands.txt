@@ -1,0 +1,16 @@
+pwd
+cd /tmp
+pwd
+cd /workspace/scratch/876e69c55179/myshell/tests/tmp/trace
+pwd
+touch test.txt
+echo trace-data > test.txt
+cat test.txt
+ls -l
+echo hello > out.txt
+echo world >> out.txt
+cat < out.txt
+ls | wc -l
+printf hello | wc -c
+rm test.txt
+exit

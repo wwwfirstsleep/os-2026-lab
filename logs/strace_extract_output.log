@@ -1,0 +1,51 @@
+## cd
+970   chdir("/tmp")                     = 0
+
+## pwd
+970   getcwd("/workspace/scratch/876e69c55179/myshell", 4096) = 40
+970   getcwd("/tmp", 4096)              = 5
+970   getcwd("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace", 4096) = 56
+
+## touch/cat
+970   openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT, 0666) = 3
+970   openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   openat(AT_FDCWD, "test.txt", O_RDONLY) = 3
+
+## rm
+970   unlink("test.txt")                = 0
+
+## external
+971   execve("/usr/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = 0
+
+## redirection open
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+970   openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+
+## redirection dup2
+970   dup2(4, 1)                        = 1
+970   dup2(3, 1)                        = 1
+970   dup2(4, 1)                        = 1
+
+## read
+970   read(0, "hello\nworld\n", 8192)   = 12
+
+## write
+970   write(1, "hello\n", 6)            = 6
+970   write(1, "hello\nworld\n", 12)    = 12
+974   write(1, "hello", 5 <unfinished ...>
+
+## pipe
+970   pipe2([3, 4], 0)                  = 0
+970   pipe2([3, 4], 0)                  = 0
+
+## fork wrapper
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 971
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fe7a8656a10) = 972
+970   clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+
+## reaping
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 971
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 972
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 973
+

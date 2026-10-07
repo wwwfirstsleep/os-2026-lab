@@ -1,0 +1,11 @@
+/workspace/scratch/876e69c55179/myshell
+/tmp
+/workspace/scratch/876e69c55179/myshell/tests/tmp/trace
+trace-data
+total 8
+-rw-r--r-- 1 root root 12 Oct  2 18:43 out.txt
+-rw-r--r-- 1 root root 11 Oct  2 19:51 test.txt
+hello
+world
+2
+5

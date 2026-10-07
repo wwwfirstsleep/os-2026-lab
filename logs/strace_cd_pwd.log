@@ -1,0 +1,5 @@
+970   getcwd("/workspace/scratch/876e69c55179/myshell", 4096) = 40
+970   chdir("/tmp")                     = 0
+970   getcwd("/tmp", 4096)              = 5
+970   chdir("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace") = 0
+970   getcwd("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace", 4096) = 56

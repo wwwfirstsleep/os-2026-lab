@@ -1,0 +1,4 @@
+Final report: docs/report.docx and docs/report.pdf, 17 A4 pages.
+Rendered DOCX using LibreOffice and Poppler. All 17 full-size page images visually inspected.
+Chinese text, tables, actual log excerpts, complete source listing and Makefile readable; no observed clipping or overlap.
+Log excerpts are document text, not fabricated native terminal screenshots.

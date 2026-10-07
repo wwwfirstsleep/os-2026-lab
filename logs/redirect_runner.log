@@ -1,0 +1,155 @@
+make: Nothing to be done for 'all'.
+
+CASE output append input
+INPUT:
+echo hello>out.txt
+echo world>>out.txt
+cat<out.txt
+echo terminal
+
+STDOUT='hello\nworld\nterminal\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE truncate
+INPUT:
+echo reset > out.txt
+cat out.txt
+
+STDOUT='reset\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE external redirection
+INPUT:
+printf external > external.txt
+wc -c < external.txt
+
+STDOUT='8\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE input and output
+INPUT:
+cat < out.txt > copy.txt
+cat copy.txt
+
+STDOUT='reset\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE redirect failure restores stdout
+INPUT:
+echo hidden > missing-dir/out
+echo alive
+
+STDOUT='alive\n'
+STDERR='missing-dir/out: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE input failure restores stdin
+INPUT:
+cat < missing-input
+echo alive
+
+STDOUT='alive\n'
+STDERR='missing-input: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE syntax echo >
+INPUT:
+echo >
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax cat <
+INPUT:
+cat <
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax echo > > x
+INPUT:
+echo > > x
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax echo > a > b
+INPUT:
+echo > a > b
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax > only-file
+INPUT:
+> only-file
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax echo x |
+INPUT:
+echo x |
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE syntax echo "hi"
+INPUT:
+echo "hi"
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: quotes, escapes, ; and & are unsupported\n'
+EXIT=0
+PASS
+
+CASE cd redirection remains parent
+INPUT:
+cd /workspace/scratch/876e69c55179/myshell > cd-out
+pwd
+
+STDOUT='/workspace/scratch/876e69c55179/myshell\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE echo write failure
+INPUT:
+echo hi > /dev/full
+echo alive
+
+STDOUT='alive\n'
+STDERR='stdout: No space left on device\n'
+EXIT=0
+PASS
+
+TOTAL PASS 15 subprocess cases; PTY checked in robust group

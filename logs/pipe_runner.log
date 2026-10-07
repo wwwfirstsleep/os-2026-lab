@@ -1,0 +1,156 @@
+make: Nothing to be done for 'all'.
+
+CASE pipe external
+INPUT:
+printf hello|wc -c
+
+STDOUT='5\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe ls
+INPUT:
+ls | wc -l
+
+STDOUT='14\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe builtin
+INPUT:
+cat pipe-input | wc -w
+
+STDOUT='2\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe both builtins
+INPUT:
+echo hello | cat
+
+STDOUT='hello\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe with redirections
+INPUT:
+cat < pipe-input | wc -w > words.txt
+cat words.txt
+
+STDOUT='2\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE large pipe no deadlock
+INPUT:
+seq 1 100000 | wc -l
+
+STDOUT='100000\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE early reader exit
+INPUT:
+yes | head -n 1
+
+STDOUT='y\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe cd isolated
+INPUT:
+cd /workspace/scratch/876e69c55179/myshell | cat
+pwd
+
+STDOUT='/workspace/scratch/876e69c55179/myshell/tests/tmp\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe exit isolated
+INPUT:
+exit | cat
+echo alive
+
+STDOUT='alive\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pipe unknown continues
+INPUT:
+unknown_command | cat
+echo alive
+
+STDOUT='alive\n'
+STDERR='unknown_command: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE right exit status
+INPUT:
+echo hi | unknown_command
+
+STDOUT=''
+STDERR='unknown_command: No such file or directory\n'
+EXIT=127
+PASS
+
+CASE pipe redirection override
+INPUT:
+echo file > pipe-out | wc -c
+cat pipe-out
+
+STDOUT='0\nfile\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE bad pipeline | cat
+INPUT:
+| cat
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE bad pipeline echo hi |
+INPUT:
+echo hi |
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: invalid syntax, duplicate redirection or too many arguments\n'
+EXIT=0
+PASS
+
+CASE bad pipeline echo hi || cat
+INPUT:
+echo hi || cat
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: only one pipe supported\n'
+EXIT=0
+PASS
+
+CASE bad pipeline echo hi | cat | wc -c
+INPUT:
+echo hi | cat | wc -c
+echo alive
+
+STDOUT='alive\n'
+STDERR='parse: only one pipe supported\n'
+EXIT=0
+PASS
+
+TOTAL PASS 16 subprocess cases; PTY checked in robust group

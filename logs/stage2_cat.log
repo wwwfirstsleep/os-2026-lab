@@ -1,0 +1,205 @@
+$ make
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 -g src/myshell.c -o myshell
+$ python3 tests/run_tests.py
+
+CASE ls
+INPUT:
+ls
+exit
+
+STDOUT=''
+STDERR=''
+EXIT=0
+PASS
+
+CASE ls -l
+INPUT:
+ls -l
+exit
+
+STDOUT='total 0\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE whoami
+INPUT:
+whoami
+exit
+
+STDOUT='root\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE uname -a
+INPUT:
+uname -a
+exit
+
+STDOUT='Linux 2bd07fc45921 6.18.44 #1 SMP Sat Sep 26 20:02:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE echo hello
+INPUT:
+echo hello
+exit
+
+STDOUT='hello\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE unknown continues
+INPUT:
+unknown_command
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='unknown_command: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE empty and EOF
+INPUT:
+
+	
+
+STDOUT=''
+STDERR=''
+EXIT=0
+PASS
+
+CASE exit arguments
+INPUT:
+exit bad
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='exit: no arguments supported\n'
+EXIT=0
+PASS
+
+CASE argument limit
+INPUT:
+echo a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='parse: too many arguments\n'
+EXIT=0
+PASS
+
+CASE cd parent
+INPUT:
+cd /workspace/scratch/876e69c55179/myshell
+/bin/pwd
+exit
+
+STDOUT='/workspace/scratch/876e69c55179/myshell\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE cd error
+INPUT:
+cd /not_exist
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='cd: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE cd arity
+INPUT:
+cd a b
+
+STDOUT=''
+STDERR='cd: expected zero or one path\n'
+EXIT=2
+PASS
+
+CASE pwd
+INPUT:
+pwd
+cd /workspace/scratch/876e69c55179/myshell
+pwd
+exit
+
+STDOUT='/workspace/scratch/876e69c55179/myshell/tests/tmp\n/workspace/scratch/876e69c55179/myshell\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE pwd arity
+INPUT:
+pwd extra
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='pwd: no arguments supported\n'
+EXIT=0
+PASS
+
+CASE echo spaces
+INPUT:
+echo one two
+echo
+echo -n literal
+exit
+
+STDOUT='one two\n\n-n literal\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE echo excessive arguments
+INPUT:
+echo x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x 
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='parse: too many arguments\n'
+EXIT=0
+PASS
+
+CASE cat file
+INPUT:
+cat cat-input.txt
+exit
+
+STDOUT='alpha\nbeta\n'
+STDERR=''
+EXIT=0
+PASS
+
+CASE cat error
+INPUT:
+cat not_exist.txt
+echo alive
+exit
+
+STDOUT='alive\n'
+STDERR='not_exist.txt: No such file or directory\n'
+EXIT=0
+PASS
+
+CASE cat directory
+INPUT:
+cat .
+
+STDOUT=''
+STDERR='cat: read: Is a directory\n'
+EXIT=1
+PASS
+
+TOTAL PASS 19

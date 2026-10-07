@@ -1,0 +1,20 @@
+7600593 capture 14 real Linux terminal windows and append verified report pages
+0ee5266 add step-by-step Mac browser upload and screenshot run guide
+bf3a963 prepare unexecuted Linux terminal screenshot workflow for user repository
+71287a5 audit requirements, correct screenshot obligation and add semantic tests
+5cdc979 finalize agent-assisted report with actual evidence and source listing
+7679a7b revalidate all features and prepare honest agent-assisted submission
+ed7b4ca fix strace reaping parser for complete and resumed syscall lines
+3c0223d document full acceptance and add verified Chinese report with source appendix
+5d30ebc add final tests real strace evidence and documented failures
+ecfdc51 add single pipeline with concurrent children and fd closure tests
+bbc45e4 implement real input output append redirection with fd restoration
+025baf8 support HOME PATH initialization expansion and verify PATH lookup
+02f67b9 add builtin rm with normal error and regression tests
+cf4e4c9 add builtin touch with normal error and regression tests
+fee772d add builtin cat with normal error and regression tests
+9e4780f add builtin echo with normal error and regression tests
+65e5a2e add builtin pwd with normal error and regression tests
+f44d06b add cd and adapt directory test to actual sandbox filesystem
+7d5516a implement and test minimal fork execvp waitpid shell
+8d7e20f init project and record environment and assignment

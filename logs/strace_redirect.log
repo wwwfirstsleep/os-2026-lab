@@ -1,0 +1,168 @@
+970   close(3)                          = 0
+970   close(3)                          = 0
+970   close(3)                          = 0
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   close(4)                          = 0
+971   statx(AT_FDCWD, "out.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=12, ...}) = 0
+971   lgetxattr("out.txt", "security.selinux", 0x561abdbd81f0, 255) = -1 ENODATA (No data available)
+971   listxattr("out.txt", "", 152)     = 0
+971   close(3)                          = 0
+971   close(3)                          = 0
+971   close(1)                          = 0
+971   close(2)                          = 0
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+970   dup2(4, 1)                        = 1
+970   close(4)                          = 0
+970   dup2(3, 1)                        = 1
+970   close(3)                          = 0
+970   fcntl(0, F_DUPFD_CLOEXEC, 3)      = 3
+970   openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+970   dup2(4, 0)                        = 0
+970   close(4)                          = 0
+970   dup2(3, 0)                        = 0
+970   close(3)                          = 0
+970   close(3 <unfinished ...>
+972   dup2(4, 1 <unfinished ...>
+970   close(4 <unfinished ...>
+972   close(3)                          = 0
+973   dup2(3, 0 <unfinished ...>
+972   close(4 <unfinished ...>
+973   close(3)                          = 0
+973   close(4 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+973   close(3)                          = 0
+973   close(3)                          = 0
+973   close(3)                          = 0
+973   close(3)                          = 0
+973   close(3)                          = 0
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3)                          = 0
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+973   close(3)                          = 0
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3)                          = 0
+972   close(3 <unfinished ...>
+973   close(3 <unfinished ...>
+972   close(3 <unfinished ...>
+973   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   close(3)                          = 0
+972   write(1, "out.txt\ntest.txt\n", 17) = 17
+972   close(1 <unfinished ...>
+973   <... read resumed>"out.txt\ntest.txt\n", 16320) = 17
+972   close(2 <unfinished ...>
+973   close(0)                          = 0
+973   close(1 <unfinished ...>
+973   close(2)                          = 0
+974   dup2(4, 1 <unfinished ...>
+970   close(3 <unfinished ...>
+970   close(4 <unfinished ...>
+974   close(3 <unfinished ...>
+975   dup2(3, 0 <unfinished ...>
+974   close(4 <unfinished ...>
+975   close(3)                          = 0
+975   close(4 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3)                          = 0
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(3 <unfinished ...>
+975   close(3 <unfinished ...>
+974   close(1)                          = 0
+974   close(2 <unfinished ...>
+975   close(0)                          = 0
+975   close(1)                          = 0
+975   close(2)                          = 0

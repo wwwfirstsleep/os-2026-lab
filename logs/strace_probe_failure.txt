@@ -1,0 +1,7 @@
+Initial sandbox probe: strace -f -o logs/strace_probe.log /bin/true
+Exit 1; original tool output:
+strace: test_ptrace_get_syscall_info: PTRACE_TRACEME: Operation not permitted
+strace: ptrace(PTRACE_TRACEME, ...): Operation not permitted
+strace: PTRACE_SETOPTIONS: Operation not permitted
+strace: cleanup: waitpid(-1, __WALL): No child processes
+Resolution: approved execution outside the restricted sandbox; strace probe and full trace succeeded.

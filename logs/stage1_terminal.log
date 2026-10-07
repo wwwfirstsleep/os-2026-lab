@@ -1,0 +1,14 @@
+Script started on 2026-10-02 21:35:55-04:00 [COMMAND="./myshell" <not executed on terminal>]
+echo hello
+ls -l
+exit
+[OS-LAB1] myshell$ hello
+[OS-LAB1] myshell$ total 44
+-rw-r--r-- 1 root root   213 Oct  2 21:35 Makefile
+drwxr-xr-x 2 root root  4096 Oct  2 21:35 docs
+drwxr-xr-x 2 root root  4096 Oct  2 21:35 logs
+-rwxr-xr-x 1 root root 23280 Oct  2 21:35 myshell
+drwxr-xr-x 2 root root  4096 Oct  2 21:35 src
+drwxr-xr-x 3 root root  4096 Oct  2 21:35 tests
+[OS-LAB1] myshell$ 
+Script done on 2026-10-02 21:35:56-04:00 [COMMAND_EXIT_CODE="0"]
