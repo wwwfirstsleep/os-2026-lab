@@ -171,4 +171,4 @@ git -C restored-myshell log --oneline --reverse
 
 bundle保存的是归档时的开发版本，不一定包含此后单独上传的最新版报告和证据；当前提交材料以本仓库文件为准。
 
-[功能与证据映射](docs/evidence.md)、[原理说明](docs/understanding.md)、[开发过程摘要](docs/process.md)供理解和追溯使用。报告给出技术解释，但不能代替学生本人的理解与讲解。交互Word及补充TXT是已保存的部分记录，过程摘要也不能冒充完整聊天导出。
+[功能与证据映射](docs/evidence.md)、[原理说明](docs/understanding.md)、[开发过程摘要](docs/process.md)供理解和追溯使用。
