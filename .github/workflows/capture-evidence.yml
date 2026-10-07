@@ -1,1 +1,32 @@
+name: Capture real Linux terminal evidence
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Linux test and terminal tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc make strace python3 util-linux xvfb xterm imagemagick xauth fonts-dejavu-core
+      - name: Run tests and capture actual X terminal windows
+        run: xvfb-run -a -s '-screen 0 1600x1000x24' python3 tests/capture_terminal.py
+      - name: Preserve screenshots and raw run logs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-terminal-evidence
+          path: |
+            docs/screenshots/*.png
+            logs/screenshots/
+            logs/strace*.log
+            logs/final*.log
+            logs/verification*.log
+          if-no-files-found: error
 
