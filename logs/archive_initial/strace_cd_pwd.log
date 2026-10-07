@@ -1,0 +1,5 @@
+1278  getcwd("/workspace/scratch/876e69c55179/myshell", 4096) = 40
+1278  chdir("/tmp")                     = 0
+1278  getcwd("/tmp", 4096)              = 5
+1278  chdir("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace") = 0
+1278  getcwd("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace", 4096) = 56

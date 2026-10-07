@@ -1,0 +1,16 @@
+/workspace/scratch/876e69c55179/myshell/tests/capture_local_terminal.py:32: SyntaxWarning: invalid escape sequence '\('
+  ('10-strace-history','HISTORICAL TRACE FILE VIEW - NOT A NEW TRACE',"grep -E 'chdir\(|execve\(\"/usr/bin/ls\"|out.txt.*O_|pipe2\(' logs/strace.log; cat logs/strace_reaping.log"),
+01-environment 0
+02-build 0
+03-prompt 0
+04-builtins 0
+05-external 0
+06-cd 0
+07-files 0
+08-redirection 0
+09-pipe 0
+10-strace-history 0
+11-git 0
+12-tests 1
+13-strace-current 1
+14-test-history 0

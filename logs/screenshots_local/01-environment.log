@@ -1,0 +1,24 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 01-environment
+CURRENT RUN
+2026-10-07T01:08:05Z
+$ uname -a; cat /etc/os-release; gcc --version | head -1; make --version | head -1; strace --version | head -1; git --version
+Linux 7745960babd0 6.18.44 #1 SMP Sat Sep 26 20:02:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+GNU Make 4.3
+strace -- version 6.8
+git version 2.51.1
+
+[actual command status: 0]

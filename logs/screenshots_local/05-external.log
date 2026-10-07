@@ -1,0 +1,18 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 05-external
+CURRENT RUN
+2026-10-07T01:08:08Z
+$ printf %s 'ls -l src
+whoami
+uname -a
+exit
+' | script -q -e -c ./myshell /dev/null
+ls -l src
+whoami
+uname -a
+exit
+[OS-LAB1] myshell$ total 12
+-rw-r--r-- 1 root root 11532 Oct  3 06:50 myshell.c
+[OS-LAB1] myshell$ root
+[OS-LAB1] myshell$ Linux 7745960babd0 6.18.44 #1 SMP Sat Sep 26 20:02:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+[OS-LAB1] myshell$ 
+[actual command status: 0]

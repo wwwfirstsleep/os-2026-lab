@@ -1,0 +1,3 @@
+PASS: 14 real terminal windows inspected. DOCX/PDF: 24 pages.
+Pages 1-17 PNGs byte-identical to previously reviewed report. Pages 18-24 each inspected at full size; no clipping/overlap.
+Do not interpret historical log views as new successful strace/full-suite runs.

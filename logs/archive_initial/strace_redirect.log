@@ -1,0 +1,165 @@
+1278  close(3)                          = 0
+1278  close(3)                          = 0
+1278  close(3)                          = 0
+1278  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+1278  dup2(4, 1)                        = 1
+1278  close(4)                          = 0
+1278  dup2(3, 1)                        = 1
+1278  close(3)                          = 0
+1278  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(4)                          = 0
+1279  close(3)                          = 0
+1279  close(3)                          = 0
+1279  close(1)                          = 0
+1279  close(2)                          = 0
+1278  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+1278  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+1278  dup2(4, 1)                        = 1
+1278  close(4)                          = 0
+1278  dup2(3, 1)                        = 1
+1278  close(3)                          = 0
+1278  fcntl(1, F_DUPFD_CLOEXEC, 3)      = 3
+1278  openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+1278  dup2(4, 1)                        = 1
+1278  close(4)                          = 0
+1278  dup2(3, 1)                        = 1
+1278  close(3)                          = 0
+1278  fcntl(0, F_DUPFD_CLOEXEC, 3)      = 3
+1278  openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+1278  dup2(4, 0)                        = 0
+1278  close(4)                          = 0
+1278  dup2(3, 0)                        = 0
+1278  close(3)                          = 0
+1281  dup2(4, 1 <unfinished ...>
+1278  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1278  close(4 <unfinished ...>
+1281  close(4 <unfinished ...>
+1282  dup2(3, 0 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(4 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(3)                          = 0
+1282  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3)                          = 0
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1282  close(3)                          = 0
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3)                          = 0
+1281  close(3 <unfinished ...>
+1282  close(3)                          = 0
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1282  close(3 <unfinished ...>
+1281  close(3 <unfinished ...>
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  close(3)                          = 0
+1281  write(1, "out.txt\ntest.txt\n", 17) = 17
+1282  <... read resumed>"out.txt\ntest.txt\n", 16320) = 17
+1281  close(1)                          = 0
+1281  close(2)                          = 0
+1282  close(0 <unfinished ...>
+1282  close(1 <unfinished ...>
+1282  close(2)                          = 0
+1283  dup2(4, 1)                        = 1
+1283  close(3)                          = 0
+1283  close(4)                          = 0
+1278  close(3 <unfinished ...>
+1278  close(4)                          = 0
+1284  dup2(3, 0 <unfinished ...>
+1284  close(3 <unfinished ...>
+1284  close(4 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3)                          = 0
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3)                          = 0
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3)                          = 0
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3 <unfinished ...>
+1284  close(3 <unfinished ...>
+1283  close(3)                          = 0
+1283  close(3)                          = 0
+1283  close(3)                          = 0
+1283  close(1 <unfinished ...>
+1283  close(2 <unfinished ...>
+1284  close(0)                          = 0
+1284  close(1 <unfinished ...>
+1284  close(2)                          = 0

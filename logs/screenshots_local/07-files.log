@@ -1,0 +1,23 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 07-files
+CURRENT RUN
+2026-10-07T01:08:09Z
+$ printf %s 'touch tests/tmp/screenshot-demo.txt
+echo data > tests/tmp/screenshot-demo.txt
+cat tests/tmp/screenshot-demo.txt
+rm tests/tmp/screenshot-demo.txt
+cat tests/tmp/screenshot-demo.txt
+echo alive
+exit
+' | script -q -e -c ./myshell /dev/null
+touch tests/tmp/screenshot-demo.txt
+echo data > tests/tmp/screenshot-demo.txt
+cat tests/tmp/screenshot-demo.txt
+rm tests/tmp/screenshot-demo.txt
+cat tests/tmp/screenshot-demo.txt
+echo alive
+exit
+[OS-LAB1] myshell$ [OS-LAB1] myshell$ [OS-LAB1] myshell$ data
+[OS-LAB1] myshell$ [OS-LAB1] myshell$ tests/tmp/screenshot-demo.txt: No such file or directory
+[OS-LAB1] myshell$ alive
+[OS-LAB1] myshell$ 
+[actual command status: 0]

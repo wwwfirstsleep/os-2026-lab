@@ -1,0 +1,17 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 14-test-history
+HISTORICAL FULL PASS FILE VIEW - NOT A NEW TEST
+2026-10-07T01:08:13Z
+$ tail -7 logs/final_test.log; cat logs/verification_summary.log; sha256sum -c logs/artifact_hashes.log
+[OS-LAB1] myshell$ alive
+[OS-LAB1] myshell$ 
+PASS prompt returns after errors
+
+TOTAL PASS 69 subprocess cases; PTY checked in robust group
+python3 tests/test_trace_parser.py
+PASS: 4 trace-parser regression samples (synthetic parser inputs, not runtime evidence)
+PASS: clean build, full suite, grouped tests and real strace completed
+src/myshell.c: OK
+Makefile: OK
+myshell: OK
+
+[actual command status: 0]

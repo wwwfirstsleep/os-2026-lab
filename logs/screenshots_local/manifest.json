@@ -1,0 +1,86 @@
+[
+  {
+    "stage": "01-environment",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "01-environment.png"
+  },
+  {
+    "stage": "02-build",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "02-build.png"
+  },
+  {
+    "stage": "03-prompt",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "03-prompt.png"
+  },
+  {
+    "stage": "04-builtins",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "04-builtins.png"
+  },
+  {
+    "stage": "05-external",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "05-external.png"
+  },
+  {
+    "stage": "06-cd",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "06-cd.png"
+  },
+  {
+    "stage": "07-files",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "07-files.png"
+  },
+  {
+    "stage": "08-redirection",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "08-redirection.png"
+  },
+  {
+    "stage": "09-pipe",
+    "label": "CURRENT RUN",
+    "exit": 0,
+    "image": "09-pipe.png"
+  },
+  {
+    "stage": "10-strace-history",
+    "label": "HISTORICAL TRACE FILE VIEW - NOT A NEW TRACE",
+    "exit": 0,
+    "image": "10-strace-history.png"
+  },
+  {
+    "stage": "11-git",
+    "label": "CURRENT HISTORY VIEW",
+    "exit": 0,
+    "image": "11-git.png"
+  },
+  {
+    "stage": "12-tests",
+    "label": "CURRENT RUN - CHECK EXIT STATUS",
+    "exit": 1,
+    "image": "12-tests.png"
+  },
+  {
+    "stage": "13-strace-current",
+    "label": "CURRENT RUN - PERMISSION CHECK",
+    "exit": 1,
+    "image": "13-strace-current.png"
+  },
+  {
+    "stage": "14-test-history",
+    "label": "HISTORICAL FULL PASS FILE VIEW - NOT A NEW TEST",
+    "exit": 0,
+    "image": "14-test-history.png"
+  }
+]

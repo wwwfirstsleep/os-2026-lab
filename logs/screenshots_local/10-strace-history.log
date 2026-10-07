@@ -1,0 +1,22 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 10-strace-history
+HISTORICAL TRACE FILE VIEW - NOT A NEW TRACE
+2026-10-07T01:08:11Z
+$ grep -E 'chdir\(|execve\("/usr/bin/ls"|out.txt.*O_|pipe2\(' logs/strace.log; cat logs/strace_reaping.log
+970   chdir("/tmp")                     = 0
+970   chdir("/workspace/scratch/876e69c55179/myshell/tests/tmp/trace") = 0
+971   execve("/usr/bin/ls", ["ls", "-l"], 0x7ffde982a288 /* 79 vars */) = 0
+971   statx(AT_FDCWD, "out.txt", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=12, ...}) = 0
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+970   openat(AT_FDCWD, "out.txt", O_WRONLY|O_CREAT|O_APPEND, 0666) = 4
+970   openat(AT_FDCWD, "out.txt", O_RDONLY) = 4
+970   pipe2([3, 4], 0)                  = 0
+972   execve("/usr/bin/ls", ["ls"], 0x7ffde982a288 /* 79 vars */ <unfinished ...>
+970   pipe2([3, 4], 0)                  = 0
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 971
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 972
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 973
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 974
+970   <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 975
+PASS: all 5 representative child processes reaped
+
+[actual command status: 0]

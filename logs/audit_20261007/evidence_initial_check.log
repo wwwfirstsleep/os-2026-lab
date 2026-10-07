@@ -1,0 +1,6 @@
+PASS original trace provenance strace_key.log 27 lines
+PASS original trace provenance strace_reaping.log 5 lines
+PASS original trace provenance strace_exec.log 51 lines
+PASS original trace provenance strace_files.log 173 lines
+PASS original trace provenance strace_cd_pwd.log 5 lines
+PASS created child PID set equals reaped PID set: ['971', '972', '973', '974', '975']

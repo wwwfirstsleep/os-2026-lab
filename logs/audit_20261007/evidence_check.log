@@ -1,0 +1,11 @@
+PASS raw trace provenance: strace_key.log 27
+PASS raw trace provenance: strace_reaping.log 5
+PASS raw trace provenance: strace_exec.log 51
+PASS raw trace provenance: strace_files.log 173
+PASS raw trace provenance: strace_cd_pwd.log 5
+PASS created PID set == reaped PID set: ['971', '972', '973', '974', '975']
+Native embedded images: 0
+PASS all 333 source lines match report appendix after documented wrapping
+PASS personal metadata
+Current original-suite PASS count before environment failure: 68
+PASS source and Makefile unchanged since report commit

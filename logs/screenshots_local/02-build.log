@@ -1,0 +1,8 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 02-build
+CURRENT RUN
+2026-10-07T01:08:06Z
+$ make clean all
+rm -f myshell
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 -g src/myshell.c -o myshell
+
+[actual command status: 0]

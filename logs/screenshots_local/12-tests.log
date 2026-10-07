@@ -1,0 +1,20 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 12-tests
+CURRENT RUN - CHECK EXIT STATUS
+2026-10-07T01:08:12Z
+$ make test > logs/screenshots_local/current-suite.log 2>&1; rc=$?; grep -c "^PASS$" logs/screenshots_local/current-suite.log; tail -9 logs/screenshots_local/current-suite.log; printf "make_test_exit=%s\n" "$rc"; python3 tests/test_audit.py > logs/screenshots_local/additional.log 2>&1; ar=$?; tail -2 logs/screenshots_local/additional.log; python3 tests/test_trace_parser.py; test "$rc" = 0 && test "$ar" = 0
+68
+    for fn in functions: fn()
+                         ^^^^
+  File "/workspace/scratch/876e69c55179/myshell/tests/run_tests.py", line 127, in test_robust
+    case('parent and child fd leak after 100 pipelines', script, 'FD_OK\n')
+  File "/workspace/scratch/876e69c55179/myshell/tests/run_tests.py", line 20, in case
+    assert p.returncode == code, (name, 'exit', code)
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('parent and child fd leak after 100 pipelines', 'exit', 0)
+make: *** [Makefile:11: test] Error 1
+make_test_exit=2
+[OS-LAB1] myshell$ 
+TOTAL PASS 18 additional subprocess cases + PTY check
+PASS: 4 trace-parser regression samples (synthetic parser inputs, not runtime evidence)
+
+[actual command status: 1]

@@ -1,0 +1,8 @@
+OS LAB 1 | Wang Xusheng | 24281204 | 04-builtins
+CURRENT RUN
+2026-10-07T01:08:07Z
+$ printf %s 'pwd
+echo hello
+echo $HOME
+exit
+' | script -q -e -c ./myshell /dev/null
