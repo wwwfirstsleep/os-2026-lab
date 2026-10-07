@@ -1,0 +1,2 @@
+rm -f myshell
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 -g src/myshell.c -o myshell
